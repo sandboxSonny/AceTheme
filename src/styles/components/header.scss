@@ -1,0 +1,174 @@
+header {
+  border-bottom: 4px solid var(--color_primary);
+
+  h3 {
+    text-align: right;
+    margin-bottom: 0;
+
+    &:last-of-type {
+      margin-top: 0;
+    }
+
+    a {
+      color: #000;
+    }
+  }
+}
+
+.header-info-inline {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-menu-inline {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-menu-standard {
+  ul {
+    li {
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.header-info-inline {
+  text-align: left;
+}
+
+.hamburger-icon {
+  height: 25px;
+  width: 30px;
+  position: relative;
+
+  i {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color_primary);
+    position: absolute;
+    top: calc(50% - 1px);
+
+    &:first-of-type {
+      position: absolute;
+      top: 0;
+    }
+
+    &:last-of-type {
+      position: absolute;
+      top: calc(100% - 2px);
+    }
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    max-width: 150px;
+    height: auto;
+
+    @media screen and (min-width: 768px) {
+      max-width: 250px;
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.header-menu {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding: 0 10px;
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: calc(-80vw - 30px);
+  background-color: var(--color_primary);
+  height: 100%;
+  width: 80vw;
+  padding: 15px;
+  transition: left 0.5s;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  li {
+    border-bottom: 1px solid #fff;
+  }
+
+  a {
+    display: flex;
+    color: #fff;
+    padding: 10px 5px;
+  }
+
+  &.is-active {
+    left: 0;
+    transition: left 0.5s;
+  }
+}
+
+.mobile-menu--footer {
+  width: 100%;
+  margin-top: auto;
+
+  li:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.mobile-menu--footer-icon {
+  display: block;
+  width: 20px;
+  margin-right: 10px;
+
+  path {
+    fill: #fff;
+  }
+}
+
+.overlay {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.5s;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.5s;
+  }
+}

@@ -1,0 +1,24 @@
+.step-group {
+  padding: 20px 0;
+}
+
+.step-area {
+  padding: 20px;
+
+  img {
+    max-height: 50px;
+  }
+
+  svg {
+    height: 50px;
+
+    path {
+      color: #fff;
+    }
+  }
+}
+
+.step-area_number {
+  font-size: 42px;
+  font-weight: bold;
+}

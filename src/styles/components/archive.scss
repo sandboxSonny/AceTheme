@@ -1,0 +1,21 @@
+.post {
+    padding: 30px;
+    border: 2px solid var(--color_primary);
+    border-radius: 30px;
+    box-sizing: border-box;
+
+    h3 {
+        margin-top: 5px;
+    }
+
+    .btn {
+        margin-bottom: 0;
+    }
+}
+
+.post_stars {
+    svg {
+        max-width: 20px;
+        color: #f5bf03;
+    }
+}

@@ -1,0 +1,40 @@
+.reviews {
+    display: flex;
+    padding-bottom: 4em;
+    overflow: auto;
+}
+
+.reviews_item {
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    min-width: 60%;
+    margin-right: 20px;
+
+    h3 {
+        margin-top: 0;
+        color: #000;
+    }
+
+    div {
+        margin-bottom: 20px;
+        color: #000;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .reviews_item {
+        min-width: 30%;
+    }
+}
+
+.reviews_item-shadow {
+    box-shadow: 38px 39px 70px -56px rgba(0, 0, 0, 1);
+}
+
+.reviews_item-stars {
+    svg {
+        max-width: 20px;
+        color: #f5bf03;
+    }
+}

@@ -1,0 +1,19 @@
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul li {
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 720px) {
+  footer ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
