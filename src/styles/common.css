@@ -282,27 +282,8 @@ body {
     margin: 0;
 }
 
-.bg-primary {
-    background-color: var(--color_primary);
-}
-
-.bg-primary h1,
-.bg-primary h2,
-.bg-primary h3,
-.bg-primary h4,
-.bg-primary h5,
-.bg-primary h6,
-.bg-primary p {
-    color: var(--color_primary_text);
-}
-
-.bg-primary .btn {
-    background-color: var(--color_primary_text);
-    color: var(--color_primary);
-}
-
 .bg-secondary {
-    background-color: var(--color_secondary);
+    background-color: var(--secondary_background_color);
 }
 
 .bg-secondary h1,
@@ -312,12 +293,12 @@ body {
 .bg-secondary h5,
 .bg-secondary h6,
 .bg-secondary p {
-    color: var(--color_secondary_text);
+    color: var(--secondary_background_text_color);
 }
 
 .bg-secondary .btn {
-    background-color: var(--color_secondary_text);
-    color: var(--color_secondary);
+    background-color: var(--secondary_background_text_color);
+    color: var(--secondary_background_color);
 }
 
 .page-section {
@@ -379,10 +360,7 @@ h6 {
 
 body {
     font-size: var(--body_size);
-}
-
-p {
-    color: #333333;
+    background-color: var(--background_color);
 }
 
 a {
@@ -397,8 +375,6 @@ a:hover {
 
 .btn,
 input[type="submit"] {
-    color: #fff;
-    background-color: var(--color_primary);
     display: inline-block;
     font-weight: 400;
     padding: 10px 20px;
@@ -407,6 +383,16 @@ input[type="submit"] {
     text-decoration: none;
     transition: 0.2s;
     cursor: pointer;
+}
+
+.btn-primary {
+    color: var(--primary_button_text_color);
+    background-color: var(--primary_button_color);
+}
+
+.btn-secondary {
+    color: var(--secondary_button_text_color);
+    background-color: var(--secondary_button_color);
 }
 
 .btn:hover,

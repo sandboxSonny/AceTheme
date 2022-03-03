@@ -39,7 +39,7 @@
                                 the_post_thumbnail('medium', array( 'class' => 'img-fluid' ));
                                 echo '<h3>' . get_the_title() . '</h3>';
                                 echo '<div>' . get_the_excerpt() . '</div>';
-                                echo '<span class="btn">Read More</span>';
+                                echo '<span class="btn btn-primary">Read More</span>';
                             echo '</a>';
                         echo '</div>';
                     endwhile;

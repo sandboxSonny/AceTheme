@@ -8,7 +8,7 @@ echo '<div class="page-section four-oh-four">';
         echo '<h1>404</h1>';
         echo '<h3>Helful Links</h3>';
         echo '<div>';
-            echo '<a class="btn" href="/">Homepage</a>';
+            echo '<a class="btn btn-primary" href="/">Homepage</a>';
         echo '</div>';
     echo '</div>';
 echo '</div>';

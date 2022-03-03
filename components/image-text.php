@@ -22,7 +22,7 @@
                         echo '<h2>' . $title . '</h2>';
                         echo '<p>' . $content . '</p>';
                         if($button_link) {
-                            echo '<a class="btn" href="' . $button_link . '">' . $button_text . '</a>';
+                            echo '<a class="btn btn-primary" href="' . $button_link . '">' . $button_text . '</a>';
                         }
                     echo '</div>';
                 echo '</div>';

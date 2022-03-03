@@ -12,7 +12,7 @@
             <p><?php the_field('popup_content', 'option'); ?></p>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn"><?php the_field('popup_button_text', 'option'); ?></button>
+            <button type="button" class="btn btn-primary"><?php the_field('popup_button_text', 'option'); ?></button>
         </div>
     </div>
 </div>

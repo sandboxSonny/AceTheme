@@ -31,7 +31,7 @@ echo '<div class="container">';
                     echo get_post_field('post_content', $post->ID);
                 echo '</div>';
                 echo '<div>';
-                    echo '<a class="btn" href="' . get_site_url() . '">Contact Us</a>';
+                    echo '<a class="btn btn-primary" href="' . get_site_url() . '">Contact Us</a>';
                 echo '</div>';
             endwhile;
 
