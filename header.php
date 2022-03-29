@@ -14,10 +14,6 @@
       if (get_field('announcement_enable', 'option')) {
         include('includes/announcement.php');
       }
-      if (get_field('header_type', 'option') == 'inline') {
-        include('includes/header-inline.php');
-      } else {
-        include('includes/header-standard.php');
-      }
+      include('includes/header.php');
     ?>
   </header>
