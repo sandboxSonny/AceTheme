@@ -30,7 +30,7 @@
                                     $active_class = '';
                                 }
                                 echo '<li>';
-                                    echo '<a data-tab="' . $item_handle . '" class="nav-link js-tabbedToggle' . $active_class . '">';
+                                    echo '<a data-tab="' . $item_handle . '" class="nav-link tabbed_toggle' . $active_class . '">';
                                         echo $item_text;
                                     echo '</a>';
                                 echo '</li>';

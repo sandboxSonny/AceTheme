@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="d-flex d-md-none w-100 h-100 justify-content-end align-items-center">
-                <a href="#" class="js-toggleMenu">
+                <a href="#" class="toggle_menu">
                     <div class="hamburger-icon">
                         <i></i>
                         <i></i>
@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobile_menu">
     <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
     <?php if (get_field('announcement_bar', 'option')) { ?>
         <ul class="mobile-menu--footer">
