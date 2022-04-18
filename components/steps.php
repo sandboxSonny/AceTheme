@@ -13,7 +13,7 @@
                         $i++;
                         $step_title = get_sub_field('step_title');
                         $step_content = get_sub_field('step_content');
-                        echo '<div class="col step-area">';
+                        echo '<div class="col-12 col-md-4 step-area">';
                             echo '<span class="step-area_number">' . $i . '.</span>';
                             echo '<h3>' . $step_title . '</h3>';
                            echo ' <p>' . $step_content . '</p>';
