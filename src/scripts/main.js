@@ -1,19 +1,19 @@
 const selectors = {
-  menuToggles = '.js-toggleMenu',
-  mobileMenu = '#mobileMenu',
-  overlay = '#overlay',
-  popup = '#sitePopup',
-  tabbedItems = '.js-tabbedToggle',
-  tabbedPanels = '.tab-panel'
+  menuToggles: '.toggle_menu',
+  mobileMenu: '#mobile_menu',
+  overlay: '#overlay',
+  popup: '#site_popup',
+  tabbedItems: '.tabbed_toggle',
+  tabbedPanels: '.tab_panel'
 }
 
 const objects = {
-  objMenuToggles = document.querySelectorAll(selectors.menuToggles),
-  mobileMenu = document.querySelector(selectors.mobileMenu),
-  overlay = document.querySelector(selectors.overlay),
-  popup = document.querySelector(selectors.popup),
-  tabbedItems = document.querySelectorAll(selectors.tabbedItems),
-  tabbedPanels = document.querySelectorAll(selectors.tabbedPanels)
+  objMenuToggles: document.querySelectorAll(selectors.menuToggles),
+  mobileMenu: document.querySelector(selectors.mobileMenu),
+  overlay: document.querySelector(selectors.overlay),
+  popup: document.querySelector(selectors.popup),
+  tabbedItems: document.querySelectorAll(selectors.tabbedItems),
+  tabbedPanels: document.querySelectorAll(selectors.tabbedPanels)
 }
 
 for (const tabbedItem of objects.tabbedItems) {

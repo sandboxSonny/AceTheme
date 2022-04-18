@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-popup.css">
 
-<div id="sitePopup" class="modal">
+<div id="site_popup" class="modal">
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title"><?php the_field('popup_title', 'option'); ?></h5>
