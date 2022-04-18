@@ -1,12 +1,20 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-header.css">
 
+<?php
+    $logo = get_field('logo', 'option');
+    $logo_size = 'small';
+    $email = the_field('email', 'option');
+    $primary_number = the_field('primary_number', 'option');
+    $secondary_number = the_field('secondary_number', 'option');
+?>
+
 <div class="container">
     <div class="row">
         <div class="col header-logo">
             <h1>
                 <a href="<?php echo home_url(); ?>">
-                    <?php if (get_field('logo', 'option')) {
-                        echo get_field('logo', 'option');
+                    <?php if ($logo) {
+                        echo wp_get_attachment_image($logo, $logo_size, "", array( "class" => "img-fluid" ));
                     } else {
                         echo get_bloginfo( 'name' );
                     } ?>
@@ -16,9 +24,6 @@
         <div class="col d-flex flex-1 flex-wrap justify-content-end align-items-center">
             <div class="d-none d-md-block w-100">
                 <?php if (!get_field('announcement_bar', 'option')) {
-                    $email = the_field('email', 'option');
-                    $primary_number = the_field('primary_number', 'option');
-                    $secondary_number = the_field('secondary_number', 'option');
                     if ($email) {
                         echo '<a href="mailto:"' . $email  .  '">' . $email . '</a>';
                     }

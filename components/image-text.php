@@ -3,7 +3,7 @@
 <?php
     $background = get_sub_field('background');
     $image = get_sub_field('image');
-    $image_alt = get_sub_field('image_alt');
+    $image_size = 'large';
     $title = get_sub_field('title');
     $content = get_sub_field('text');
     $button_link = get_sub_field('button_link');
@@ -15,7 +15,7 @@
                 echo '<div class="row">';
                     echo '<div class="col-md-6 pb-4 pb-0">';
                         if ($image) {
-                            echo '<img class="img-fluid" src="' . $image . '" alt="' .  $image_alt . '">';
+                            echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid" ));
                         }
                     echo '</div>';
                     echo '<div class="col-md-6 image-text_content">';

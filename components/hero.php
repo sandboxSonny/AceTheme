@@ -2,10 +2,10 @@
 
 <?php
   $image = get_sub_field('image');
-  $image_alt = get_sub_field('image_alt');
+  $image_size = 'full';
   $content = get_sub_field('content');
   if ($image) {
-    echo '<img class="img-fluid" src="' . $image . '" alt="' . $image_alt . '">';
+    echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid" ));
   }
   if ($content) {
     echo '<div class="hero_content">';

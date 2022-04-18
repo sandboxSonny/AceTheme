@@ -8,12 +8,12 @@
                 echo '<div class="row">';
                     while ( have_rows('columns') ) : the_row();
                         $image = get_sub_field('image');
-                        $image_alt = get_sub_field('image_alt');
+                        $image_size = 'medium';
                         $title = get_sub_field('title');
                         $content = get_sub_field('content');
                         echo '<div class="col column-area">';
                             if ($image) {
-                                echo '<img class="img-fluid" src="' . $image . '" alt="' . $image_alt . '" />';
+                                echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid" ));
                             }
                             echo '<h3>' . $title . '</h3>';
                             echo ' <p>' . $content . '</p>';
