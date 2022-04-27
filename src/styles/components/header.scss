@@ -15,19 +15,7 @@ header {
   }
 }
 
-.header-info-inline {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.header-menu-inline {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.header-menu-standard {
+.header-menu {
   ul {
     li {
       &:last-of-type {
@@ -35,10 +23,6 @@ header {
       }
     }
   }
-}
-
-.header-info-inline {
-  text-align: left;
 }
 
 .hamburger-icon {
@@ -81,6 +65,19 @@ header {
 
   h1 {
     margin: 0;
+  }
+}
+
+.header-contact {
+  text-align: right;
+
+  a {
+    display: inline-block;
+    padding-right: var(--spacing_sm);
+
+    &:last-of-type {
+      padding-right: 0;
+    }
   }
 }
 
