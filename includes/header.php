@@ -3,9 +3,9 @@
 <?php
     $logo = get_field('logo', 'option');
     $logo_size = 'small';
-    $email = the_field('email', 'option');
-    $primary_number = the_field('primary_number', 'option');
-    $secondary_number = the_field('secondary_number', 'option');
+    $email = get_field('email', 'option');
+    $primary_number = get_field('primary_number', 'option');
+    $secondary_number = get_field('secondary_number', 'option');
 ?>
 
 <div class="container">
@@ -23,18 +23,20 @@
         </div>
         <div class="col d-flex flex-1 flex-wrap justify-content-end align-items-center">
             <div class="d-none d-md-block w-100">
-                <?php if (!get_field('announcement_bar', 'option')) {
-                    if ($email) {
-                        echo '<a href="mailto:"' . $email  .  '">' . $email . '</a>';
-                    }
-                    if ($primary_number) {
-                        echo '<a href="tel:' . $primary_number . '">' . $primary_number . '</a>';
-                    }
-                    if ($secondary_number) {
-                        echo '<a href="tel:' . $secondary_number . '">' . $secondary_number . '</a>';
-                    }
+                <?php if (!get_field('announcement_enable', 'option')) {
+                    echo '<div class="header-contact">';
+                        if ($email) {
+                            echo '<a href="mailto:"' . $email  .  '">' . $email . '</a>';
+                        }
+                        if ($primary_number) {
+                            echo '<a href="tel:' . $primary_number . '">' . $primary_number . '</a>';
+                        }
+                        if ($secondary_number) {
+                            echo '<a href="tel:' . $secondary_number . '">' . $secondary_number . '</a>';
+                        }
+                    echo '</div>';
                 } ?>
-                <div class="header-menu header-menu-standard d-flex align-items-center">
+                <div class="header-menu d-flex align-items-center">
                     <nav id="main-menu">
                         <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
                     </nav>
@@ -55,7 +57,7 @@
 
 <div class="mobile-menu" id="mobile_menu">
     <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
-    <?php if (get_field('announcement_bar', 'option')) { ?>
+    <?php if (get_field('announcement_enable', 'option')) { ?>
         <ul class="mobile-menu--footer">
             <?php if (get_field('email', 'option')) { ?>
                 <li><a href="mailto:<?php the_field('email', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php $icon = 'email'; include(dirname(dirname(__FILE__)) . '/includes/icon.php'); ?></span><?php the_field('email', 'option'); ?></a></li>
