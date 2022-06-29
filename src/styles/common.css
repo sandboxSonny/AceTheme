@@ -91,14 +91,6 @@ body {
     box-sizing: border-box;
 }
 
-.row [class^="col"]:first-of-type {
-    margin-left: 0;
-}
-
-.row [class^="col"]:last-of-type {
-    margin-right: 0;
-}
-
 .row::after {
     content: "";
     display: table;
