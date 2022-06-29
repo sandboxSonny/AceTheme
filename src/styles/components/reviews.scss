@@ -22,6 +22,11 @@
     }
 }
 
+.bg-secondary .reviews_item .btn {
+    color: var(--primary_button_text_color);
+    background-color: var(--primary_button_color);
+}
+
 @media screen and (min-width: 768px) {
     .reviews_item {
         min-width: 30%;
@@ -37,4 +42,8 @@
         max-width: 20px;
         color: #f5bf03;
     }
+}
+
+.bg-primary .reviews_item {
+    padding: 0;
 }
