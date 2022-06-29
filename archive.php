@@ -1,6 +1,7 @@
 <?php
     get_header();
 ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-archive.css">
 
 <div class="page-section bg-primary">
     <div class="container">
