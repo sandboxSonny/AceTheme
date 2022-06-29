@@ -1586,7 +1586,7 @@
                 "label": "Mobile Menu Background",
                 "name": "mobile_menu_background",
                 "type": "select",
-                "instructions": "primary : Primary\r\nsecondary : Secondary",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1594,7 +1594,10 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": [],
+                "choices": {
+                    "primary": "Primary",
+                    "secondary": "Secondary"
+                },
                 "default_value": false,
                 "allow_null": 0,
                 "multiple": 0,
