@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-header.css">
 
 <?php
+    $background = get_field('mobile_menu_background', 'option');
     $logo = get_field('logo', 'option');
     $logo_size = 'small';
     $email = get_field('email', 'option');
