@@ -1,0 +1,53 @@
+{
+    "key": "group_61c0f2d948791",
+    "title": "Reviews",
+    "fields": [
+        {
+            "key": "field_61c0f2e039604",
+            "label": "Star Rating",
+            "name": "star_rating",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "One",
+                "2": "Two",
+                "3": "Three",
+                "4": "Four",
+                "5": "Five"
+            },
+            "default_value": 5,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "reviews"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1657484738
+}
