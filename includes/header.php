@@ -4,6 +4,9 @@
     $background = get_field('mobile_menu_background', 'option');
     $logo = get_field('logo', 'option');
     $logo_size = 'small';
+    $mobile_menu_details = get_field('mobile_menu_details', 'option');
+    $header_details = get_field('header_details', 'option');
+    $header_details_icons = get_field('header_details_icons', 'option');
     $email = get_field('email', 'option');
     $primary_number = get_field('primary_number', 'option');
     $secondary_number = get_field('secondary_number', 'option');
@@ -24,16 +27,34 @@
         </div>
         <div class="col d-flex flex-1 flex-wrap justify-content-end align-items-center">
             <div class="d-none d-md-block w-100">
-                <?php if (!get_field('announcement_enable', 'option')) {
+                <?php if ($header_details) {
                     echo '<div class="header-contact">';
                         if ($email) {
-                            echo '<a href="mailto:"' . $email  .  '">' . $email . '</a>';
+                            echo '<a href="mailto:' . $email  .  '">';
+                                if ($header_details_icons) {
+                                    $icon = 'email';
+                                    include(get_template_directory() . '/includes/icon.php');
+                                }
+                                echo '<span>' . $email . '</span>';
+                            echo '</a>';
                         }
                         if ($primary_number) {
-                            echo '<a href="tel:' . $primary_number . '">' . $primary_number . '</a>';
+                            echo '<a href="tel:' . $primary_number . '">';
+                                if ($header_details_icons) {
+                                    $icon = 'phone';
+                                    include(get_template_directory() . '/includes/icon.php');
+                                }
+                                echo '<span>' . $primary_number . '</span>';
+                            echo '</a>';
                         }
                         if ($secondary_number) {
-                            echo '<a href="tel:' . $secondary_number . '">' . $secondary_number . '</a>';
+                            echo '<a href="tel:' . $secondary_number . '">';
+                                if ($header_details_icons) {
+                                    $icon = 'phone';
+                                    include(get_template_directory() . '/includes/icon.php');
+                                }
+                                echo '<span>' . $secondary_number . '</span>';
+                            echo '</a>';
                         }
                     echo '</div>';
                 } ?>
@@ -58,7 +79,7 @@
 
 <div class="mobile-menu" id="mobile_menu">
     <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
-    <?php if (get_field('announcement_enable', 'option')) { ?>
+    <?php if (get_field('mobile_menu_details', 'option')) { ?>
         <ul class="mobile-menu--footer">
             <?php if (get_field('email', 'option')) { ?>
                 <li><a href="mailto:<?php the_field('email', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php $icon = 'email'; include(dirname(dirname(__FILE__)) . '/includes/icon.php'); ?></span><?php the_field('email', 'option'); ?></a></li>
