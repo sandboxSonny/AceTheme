@@ -69,10 +69,16 @@ header {
 }
 
 .header-contact {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+
+  svg {
+    width: 20px;
+    margin-right: var(--spacing_sm);
+  }
 
   a {
-    display: inline-block;
+    display: flex;
     padding-right: var(--spacing_sm);
 
     &:last-of-type {
