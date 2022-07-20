@@ -14,28 +14,31 @@
             <?php
                 if(have_posts()) : while(have_posts()) : the_post();
             ?>
-            <div class="col-md-6 post">
+            <div class="col-md-6 post<?php if (has_post_thumbnail()) { echo ' post--has-image'; } ?>">
                 <a href="<?php the_permalink(); ?>" class="d-block text-decoration-none">
-                    <?php
-                        if (get_post_type() == 'reviews') {
-                            $star_rating = get_field("star_rating");
-                            echo '<span class="post_stars">';
-                                for ($i = 1; $i <= 5; $i++) {
-                                    if ($star_rating >= $i) {
-                                        $icon = 'star-solid';
-                                        include(get_template_directory() . '/includes/icon.php');
-                                    } else {
-                                        $icon = 'star-empty';
-                                        include(get_template_directory() . '/includes/icon.php');
+                    <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'medium', "", array( "class" => "img-fluid" )); ?>
+                    <div class="post__content">
+                        <?php
+                            if (get_post_type() == 'reviews') {
+                                $star_rating = get_field("star_rating");
+                                echo '<span class="post_stars">';
+                                    for ($i = 1; $i <= 5; $i++) {
+                                        if ($star_rating >= $i) {
+                                            $icon = 'star-solid';
+                                            include(get_template_directory() . '/includes/icon.php');
+                                        } else {
+                                            $icon = 'star-empty';
+                                            include(get_template_directory() . '/includes/icon.php');
+                                        }
                                     }
-                                }
-                                $i = null;
-                            echo '</span>';
-                        }
-                    ?>
-                    <h3><?php the_title(); ?></h3>
-                    <?php the_excerpt(); ?>
-                    <p class="btn btn-primary">Read More</p>
+                                    $i = null;
+                                echo '</span>';
+                            }
+                        ?>
+                        <h3><?php the_title(); ?></h3>
+                        <?php the_excerpt(); ?>
+                        <span class="btn btn-primary">Read More</span>
+                    </div>
                 </a>
             </div>
             <?php
