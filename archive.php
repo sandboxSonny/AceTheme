@@ -17,19 +17,21 @@
             <div class="col-md-6 post">
                 <a href="<?php the_permalink(); ?>" class="d-block text-decoration-none">
                     <?php
-                        $star_rating = get_field("star_rating");
-                        echo '<span class="post_stars">';
-                            for ($i = 1; $i <= 5; $i++) {
-                                if ($star_rating >= $i) {
-                                    $icon = 'star-solid';
-                                    include(get_template_directory() . '/includes/icon.php');
-                                } else {
-                                    $icon = 'star-empty';
-                                    include(get_template_directory() . '/includes/icon.php');
+                        if (get_post_type() == 'reviews') {
+                            $star_rating = get_field("star_rating");
+                            echo '<span class="post_stars">';
+                                for ($i = 1; $i <= 5; $i++) {
+                                    if ($star_rating >= $i) {
+                                        $icon = 'star-solid';
+                                        include(get_template_directory() . '/includes/icon.php');
+                                    } else {
+                                        $icon = 'star-empty';
+                                        include(get_template_directory() . '/includes/icon.php');
+                                    }
                                 }
-                            }
-                            $i = null;
-                        echo '</span>';
+                                $i = null;
+                            echo '</span>';
+                        }
                     ?>
                     <h3><?php the_title(); ?></h3>
                     <?php the_excerpt(); ?>
