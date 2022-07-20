@@ -284,7 +284,8 @@ body {
 .bg-secondary h4,
 .bg-secondary h5,
 .bg-secondary h6,
-.bg-secondary p {
+.bg-secondary p,
+.bg-secondary span {
     color: var(--secondary_background_text_color);
 }
 
