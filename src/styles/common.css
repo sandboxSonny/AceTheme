@@ -85,6 +85,10 @@ body {
     width: 100%;
 }
 
+.row--reverse {
+    flex-direction: row-reverse;
+}
+
 .row [class^="col"] {
     min-height: 0.125rem;
     margin: 10px;
