@@ -2,3 +2,19 @@
   max-width: 100%;
   position: relative;
 }
+
+.image-text_content {
+  display: flex;
+}
+
+.image-text_content--top {
+  align-items: flex-start;
+}
+
+.image-text_content--center {
+  align-items: center;
+}
+
+.image-text_content--bottom {
+  align-items: flex-end;
+}
