@@ -9,6 +9,7 @@
     $background = get_sub_field('background');
     $heading = get_sub_field('heading');
     $shadow = get_sub_field('enable_shadow');
+    $review_spacing = get_sub_field('review_spacing');
 
     echo '<div class="page-section bg-' . $background . '">';
         echo '<div class="container">';
@@ -22,7 +23,13 @@
                         } else {
                             $shadow_class = '';
                         }
-                        echo '<div class="reviews_item' . $shadow_class . '">';
+
+                        if ($review_spacing) {
+                            $review_spacing = ' reviews_item--spacing';
+                        } else {
+                            $review_spacing = '';
+                        }
+                        echo '<div class="reviews_item' . $shadow_class . $review_spacing . '">';
                             echo '<span class="reviews_item-stars">';
                                 for ($i = 1; $i <= 5; $i++) {
                                     if ($star_rating >= $i) {
