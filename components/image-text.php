@@ -2,6 +2,7 @@
 
 <?php
     $background = get_sub_field('background');
+    $image_position = get_sub_field('image_position');
     $image = get_sub_field('image');
     $image_size = 'large';
     $content_align = get_sub_field('content_align');
@@ -13,7 +14,7 @@
     echo '<div class="bg-' . $background . '">';
         echo '<div class="container">';
             echo '<div class="page-section image-text">';
-                echo '<div class="row">';
+                echo '<div class="row row--' . $image_position . '">';
                     echo '<div class="col-md-6 pb-4 pb-0">';
                         if ($image) {
                             echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid" ));
