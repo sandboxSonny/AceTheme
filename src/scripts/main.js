@@ -4,7 +4,7 @@ const selectors = {
   overlay: '#overlay',
   popup: '#site_popup',
   tabbedItems: '.tabbed_toggle',
-  tabbedPanels: '.tab_panel'
+  tabbedPanels: '.tab-panel'
 }
 
 const objects = {
@@ -19,13 +19,15 @@ const objects = {
 for (const tabbedItem of objects.tabbedItems) {
   tabbedItem.addEventListener('click', function(){
     var thisItem = tabbedItem.getAttribute('data-tab');
-    for (const tabbedPanel of tabbedPanels) {
-      tabbedPanel.classList.remove('is-active');
+    for (const tabbedPanel of objects.tabbedPanels) {
+console.log(tabbedPanel);
+
+        tabbedPanel.classList.remove('is-active');
     }
     for (const tabbedItemInner of objects.tabbedItems) {
       tabbedItemInner.classList.remove('is-active');
     }
-    tabbedItem.classList.add('is-active')
+    tabbedItem.classList.add('is-active');
     document.getElementById('tab-panel-' + thisItem).classList.add('is-active');
   });
 }
