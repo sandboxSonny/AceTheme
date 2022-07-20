@@ -20,18 +20,33 @@ if ($post_types) {
 		);
 
 		add_action( 'init', function() use ( $args ) {
-			register_post_type($args['name'],
-				array(
-					'labels' => array(
-						'name' => __( $args['name'] ),
-						'singular_name' => __( $args['handle'] )
-					),
-					'public' => true,
-					'has_archive' => true,
-					'menu_icon' => $args['icon'],
-					'supports' => array( 'title', 'editor', 'custom-fields')
-				)
-			);
+			if (get_sub_field('handle') == 'reviews') {
+				register_post_type($args['name'],
+					array(
+						'labels' => array(
+							'name' => __( $args['name'] ),
+							'singular_name' => __( $args['handle'] )
+						),
+						'public' => true,
+						'has_archive' => true,
+						'menu_icon' => $args['icon'],
+						'supports' => array('title', 'editor', 'custom-fields')
+					)
+				);
+			} else {
+				register_post_type($args['name'],
+					array(
+						'labels' => array(
+							'name' => __( $args['name'] ),
+							'singular_name' => __( $args['handle'] )
+						),
+						'public' => true,
+						'has_archive' => true,
+						'menu_icon' => $args['icon'],
+						'supports' => array('title', 'editor', 'custom-fields', 'thumbnail')
+					)
+				);
+			}
 		});
 	endwhile;
 }
