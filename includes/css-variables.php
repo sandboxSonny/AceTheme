@@ -22,7 +22,7 @@
         --heading_six_size: <?php the_field('heading_six_size', 'option'); ?>px;
         --body_size: <?php the_field('body_size', 'option'); ?>px;
 
-        --content_width: <?php the_field('content_width', 'option'); ?>px;
+        --content_width: <?php the_field('content_width', 'option'); ?>;
 
         --spacing_sm: 16px;
         --spacing_md: 24px;
