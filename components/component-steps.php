@@ -3,6 +3,7 @@
 <?php 
     $background = get_sub_field('background');
     $steps = have_rows('steps');
+    $step_spacing = get_sub_field('step_spacing');
 
     if ($steps) {
         echo '<div class="page-section bg-' . $background . ' step-group">';
@@ -13,7 +14,12 @@
                         $i++;
                         $step_title = get_sub_field('step_title');
                         $step_content = get_sub_field('step_content');
-                        echo '<div class="col-12 col-md-4 step-area">';
+                        if ($step_spacing) {
+                            $step_spacing = ' reviews_item--spacing';
+                        } else {
+                            $step_spacing = '';
+                        }
+                        echo '<div class="col-12 col-md-4 step-area '. $step_spacing . '">';
                             echo '<span class="step-area_number">' . $i . '.</span>';
                             echo '<h3>' . $step_title . '</h3>';
                            echo ' <p>' . $step_content . '</p>';

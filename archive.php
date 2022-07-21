@@ -24,11 +24,9 @@
                                 echo '<span class="post_stars">';
                                     for ($i = 1; $i <= 5; $i++) {
                                         if ($star_rating >= $i) {
-                                            $icon = 'star-solid';
-                                            include(get_template_directory() . '/includes/icon.php');
+                                            get_template_part('includes/include', 'icon', array('icon' => 'star-solid'));
                                         } else {
-                                            $icon = 'star-empty';
-                                            include(get_template_directory() . '/includes/icon.php');
+                                            get_template_part('includes/include', 'icon', array('icon' => 'star-empty'));
                                         }
                                     }
                                     $i = null;

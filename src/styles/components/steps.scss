@@ -3,8 +3,6 @@
 }
 
 .step-area {
-  padding: 20px;
-
   img {
     max-height: 50px;
   }
@@ -16,6 +14,10 @@
       color: #fff;
     }
   }
+}
+
+.step-aream--spacing {
+  padding: 20px;
 }
 
 .step-area_number {

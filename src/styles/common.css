@@ -89,7 +89,9 @@ body {
 }
 
 .container {
-    margin: 0 20px;
+    max-width: var(--content_width);
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .row {
@@ -237,6 +239,10 @@ body {
     .col-md-12 {
         flex-basis: calc(100% - 20px);
         max-width: calc(100% - 20px);
+    }
+
+    .col-md {
+        flex: 1;
     }
 }
 

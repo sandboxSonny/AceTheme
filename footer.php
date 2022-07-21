@@ -11,7 +11,7 @@
     </footer>
 
     <?php if(get_field('enable_popup', 'option')) {
-      include('components/popup.php');
+      get_template_part('components/component', 'popup');
     } ?>
 
     <div id="overlay" class="overlay"></div>
