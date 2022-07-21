@@ -12,7 +12,7 @@
                         $image_size = 'medium';
                         $title = get_sub_field('title');
                         $content = get_sub_field('content');
-                        echo '<div class="col-12 col-md-4 column-area text-' . $text_alignment . '">';
+                        echo '<div class="col-12 col-md column-area text-' . $text_alignment . '">';
                             if ($image) {
                                 echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid" ));
                             }

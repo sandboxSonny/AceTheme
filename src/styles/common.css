@@ -240,6 +240,10 @@ body {
         flex-basis: calc(100% - 20px);
         max-width: calc(100% - 20px);
     }
+
+    .col-md {
+        flex: 1;
+    }
 }
 
 .d-flex {
