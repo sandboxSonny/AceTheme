@@ -90,6 +90,7 @@ body {
 
 .container {
     margin: 0 20px;
+    max-width: var(--content_width);
 }
 
 .row {
