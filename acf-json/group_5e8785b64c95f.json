@@ -3,6 +3,32 @@
     "title": "Theme General Settings",
     "fields": [
         {
+            "key": "field_62d9b0c2c9f51",
+            "label": "Content Width",
+            "name": "content_width",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1300px": "Small",
+                "1600px": "Medium",
+                "none": "Full"
+            },
+            "default_value": "none",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_61bf575360c84",
             "label": "Logo",
             "name": "logo",
@@ -309,5 +335,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657743879
+    "modified": 1658433857
 }
