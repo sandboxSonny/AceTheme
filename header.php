@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php do_action('wp_head'); ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/common.min.css">
-    <?php include('includes/css-variables.php'); ?>
+    <?php get_template_part('includes/include', 'css-variables'); ?>
   </head>
   <body>
 
   <header>
     <?php
       if (get_field('announcement_enable', 'option')) {
-        include('includes/announcement.php');
+        get_template_part('includes/include', 'announcement');
       }
-      include('includes/header.php');
+      get_template_part('includes/include', 'header');
     ?>
   </header>

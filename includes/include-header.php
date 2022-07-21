@@ -32,8 +32,7 @@
                         if ($email) {
                             echo '<a href="mailto:' . $email  .  '">';
                                 if ($header_details_icons) {
-                                    $icon = 'email';
-                                    include(get_template_directory() . '/includes/icon.php');
+                                    get_template_part('includes/include', 'icon', array('icon' => 'email'));
                                 }
                                 echo '<span>' . $email . '</span>';
                             echo '</a>';
@@ -41,8 +40,7 @@
                         if ($primary_number) {
                             echo '<a href="tel:' . $primary_number . '">';
                                 if ($header_details_icons) {
-                                    $icon = 'phone';
-                                    include(get_template_directory() . '/includes/icon.php');
+                                    get_template_part('includes/include', 'icon', array('icon' => 'phone'));
                                 }
                                 echo '<span>' . $primary_number . '</span>';
                             echo '</a>';
@@ -50,8 +48,7 @@
                         if ($secondary_number) {
                             echo '<a href="tel:' . $secondary_number . '">';
                                 if ($header_details_icons) {
-                                    $icon = 'phone';
-                                    include(get_template_directory() . '/includes/icon.php');
+                                    get_template_part('includes/include', 'icon', array('icon' => 'phone'));
                                 }
                                 echo '<span>' . $secondary_number . '</span>';
                             echo '</a>';
@@ -82,13 +79,13 @@
     <?php if (get_field('mobile_menu_details', 'option')) { ?>
         <ul class="mobile-menu--footer">
             <?php if (get_field('email', 'option')) { ?>
-                <li><a href="mailto:<?php the_field('email', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php $icon = 'email'; include(dirname(dirname(__FILE__)) . '/includes/icon.php'); ?></span><?php the_field('email', 'option'); ?></a></li>
+                <li><a href="mailto:<?php the_field('email', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php get_template_part('includes/include', 'icon', array('icon' => 'email')); ?></span><?php the_field('email', 'option'); ?></a></li>
             <?php } ?>
             <?php if (get_field('primary_number', 'option')) { ?>
-                <li><a href="<?php the_field('primary_number', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php $icon = 'phone'; include(dirname(dirname(__FILE__)) . '/includes/icon.php'); ?></span><?php the_field('primary_number', 'option'); ?></a></li>
+                <li><a href="<?php the_field('primary_number', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php get_template_part('includes/include', 'icon', array('icon' => 'phone')); ?></span><?php the_field('primary_number', 'option'); ?></a></li>
             <?php } ?>
             <?php if (get_field('secondary_number', 'option')) { ?>
-                <li><a href="<?php the_field('secondary_number', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php $icon = 'phone'; include(dirname(dirname(__FILE__)) . '/includes/icon.php'); ?></span><?php the_field('secondary_number', 'option'); ?></a></li>
+                <li><a href="<?php the_field('secondary_number', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php get_template_part('includes/include', 'icon', array('icon' => 'phone')); ?></span><?php the_field('secondary_number', 'option'); ?></a></li>
             <?php } ?>
         </ul>
     <?php } ?>
