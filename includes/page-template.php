@@ -2,25 +2,25 @@
     if( have_rows('page_components') ): 
         while( have_rows('page_components') ): the_row();
             if( get_row_layout() == 'hero' ): 
-                include(dirname(dirname(__FILE__)) . '/components/hero.php');
+                get_template_part('components/component', 'hero');
             elseif( get_row_layout() == 'image_text' ):
-                include(dirname(dirname(__FILE__)) . '/components/image-text.php');
+                get_template_part('components/component', 'image-text');
             elseif( get_row_layout() == 'steps' ):
-                include(dirname(dirname(__FILE__)) . '/components/steps.php');
+                get_template_part('components/component', 'steps');
             elseif( get_row_layout() == 'columns' ):
-                include(dirname(dirname(__FILE__)) . '/components/flex-columns.php');
+                get_template_part('components/component', 'flex-columns');
             elseif( get_row_layout() == 'accreditations' ):
-                include(dirname(dirname(__FILE__)) . '/components/accreditations.php');
+                get_template_part('components/component', 'accreditations');
             elseif( get_row_layout() == 'map' ):
-                include(dirname(dirname(__FILE__)) . '/components/map.php');
+                get_template_part('components/component', 'map');
             elseif( get_row_layout() == 'contact_text' ):
-                include(dirname(dirname(__FILE__)) . '/components/contact-text.php');
+                get_template_part('components/component', 'contact-text');
             elseif( get_row_layout() == 'content' ):
-                include(dirname(dirname(__FILE__)) . '/components/content.php');
+                get_template_part('components/component', 'content');
             elseif( get_row_layout() == 'tabbed_content' ):
-                include(dirname(dirname(__FILE__)) . '/components/tabbed-content.php');
+                get_template_part('components/component', 'tabbed-content');
             elseif( get_row_layout() == 'reviews' ):
-                include(dirname(dirname(__FILE__)) . '/components/reviews.php');
+                get_template_part('components/component', 'reviews');
             endif;
         endwhile; 
     endif; 
