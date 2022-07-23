@@ -971,6 +971,44 @@
                             "ui_off_text": ""
                         },
                         {
+                            "key": "field_62d85498501d3",
+                            "label": "Review Spacing",
+                            "name": "review_spacing",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_62dc41f6099c2",
+                            "label": "Review Border",
+                            "name": "review_border",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_61c10b80313a0",
                             "label": "Background",
                             "name": "background",
@@ -1013,25 +1051,6 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
-                        },
-                        {
-                            "key": "field_62d85498501d3",
-                            "label": "Review Spacing",
-                            "name": "review_spacing",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
                         }
                     ],
                     "min": "",
@@ -1063,5 +1082,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658598381
+    "modified": 1658601997
 }

@@ -87,6 +87,19 @@ header {
   }
 }
 
+.header-contact--header-details-verticle {
+  flex-direction: column;
+  
+  a {
+    padding: 0 0 var(--spacing_sm) 0;
+    justify-content: flex-end;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+}
+
 .header-menu {
   display: flex;
   justify-content: flex-end;
