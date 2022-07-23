@@ -2,12 +2,20 @@
 
 <?php 
     $background = get_sub_field('background');
+    $title = get_sub_field('title');
     $steps = have_rows('steps');
     $step_spacing = get_sub_field('step_spacing');
 
     if ($steps) {
         echo '<div class="page-section bg-' . $background . ' step-group">';
             echo '<div class="container">';
+                if ($title) {
+                    echo '<div class="row">';
+                        echo '<div class="col-12">';
+                            echo '<h2>' . $title . '</h2>';
+                        echo '</div>';
+                    echo '</div>';
+                }
                 echo '<div class="row">';
                     $i;
                     while ( have_rows('steps') ) : the_row();
