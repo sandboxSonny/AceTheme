@@ -2,7 +2,7 @@
     :root {
         --color_primary: <?php the_field('primary_colour', 'option'); ?>;
         --color_secondary: <?php the_field('secondary_colour', 'option'); ?>;
-        --text_color: <?php the_field('secondary_colour', 'option'); ?>;
+        --text_color: <?php the_field('text_colour', 'option'); ?>;
 
         --background_color: <?php the_field('background_colour', 'option'); ?>;
         --background_text_color: <?php the_field('background_text_colour', 'option'); ?>;
