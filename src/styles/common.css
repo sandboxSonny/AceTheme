@@ -312,11 +312,6 @@ body {
     color: var(--secondary_background_text_color);
 }
 
-.bg-secondary .btn {
-    background-color: var(--secondary_background_text_color);
-    color: var(--secondary_background_color);
-}
-
 .page-section {
     padding: 3rem 0;
     z-index: 1;
