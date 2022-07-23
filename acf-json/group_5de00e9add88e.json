@@ -533,6 +533,32 @@
                             "placeholder": ""
                         },
                         {
+                            "key": "field_62d85cef54f5d",
+                            "label": "Text Alignment",
+                            "name": "text_alignment",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "left": "Left",
+                                "center": "Center",
+                                "right": "Right"
+                            },
+                            "default_value": "left",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_61c1f4c92c89f",
                             "label": "Columns",
                             "name": "columns",
@@ -564,7 +590,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "url",
+                                    "return_format": "id",
                                     "preview_size": "medium",
                                     "library": "all",
                                     "min_width": "",
@@ -574,25 +600,6 @@
                                     "max_height": "",
                                     "max_size": "",
                                     "mime_types": ""
-                                },
-                                {
-                                    "key": "field_61e4657b15dfb",
-                                    "label": "Image Alt",
-                                    "name": "image_alt",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
                                 },
                                 {
                                     "key": "field_61c1f4c92c8a0",
@@ -633,32 +640,6 @@
                                     "new_lines": ""
                                 }
                             ]
-                        },
-                        {
-                            "key": "field_62d85cef54f5d",
-                            "label": "Text Alignment",
-                            "name": "text_alignment",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "left": "Left",
-                                "center": "Center",
-                                "right": "Right"
-                            },
-                            "default_value": "left",
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -1082,5 +1063,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658597586
+    "modified": 1658598381
 }
