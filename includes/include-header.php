@@ -6,6 +6,7 @@
     $logo_size = 'small';
     $mobile_menu_details = get_field('mobile_menu_details', 'option');
     $header_details = get_field('header_details', 'option');
+    $header_details_verticle = get_field('header_details_verticle', 'option');
     $header_details_icons = get_field('header_details_icons', 'option');
     $email = get_field('email', 'option');
     $primary_number = get_field('primary_number', 'option');
@@ -28,7 +29,12 @@
         <div class="col d-flex flex-1 flex-wrap justify-content-end align-items-center">
             <div class="d-none d-md-block w-100">
                 <?php if ($header_details) {
-                    echo '<div class="header-contact">';
+                    if ($header_details_verticle) {
+                        $header_details_verticle_class = ' header-contact--header-details-verticle';
+                    } else {
+                        $header_details_verticle_class = '';
+                    }
+                    echo '<div class="header-contact' . $header_details_verticle_class . '">';
                         if ($email) {
                             echo '<a href="mailto:' . $email  .  '">';
                                 if ($header_details_icons) {

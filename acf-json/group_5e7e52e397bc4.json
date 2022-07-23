@@ -63,6 +63,25 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_62dc3f00865e4",
+            "label": "Header Details Verticle",
+            "name": "header_details_verticle",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_62cf2bc23aefc",
             "label": "Header Details Icons",
             "name": "header_details_icons",
@@ -100,5 +119,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657744420
+    "modified": 1658601284
 }
