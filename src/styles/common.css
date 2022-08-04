@@ -313,10 +313,6 @@ body {
     color: var(--secondary_background_text_color);
 }
 
-.bg-secondary a:not(.btn) {
-    text-decoration: underline;
-}
-
 .page-section {
     padding: 3rem 0;
     z-index: 1;
