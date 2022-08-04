@@ -3,20 +3,23 @@
     "title": "Theme Header Settings",
     "fields": [
         {
-            "key": "field_62bcb38df8e0e",
-            "label": "Mobile Menu Background",
-            "name": "mobile_menu_background",
+            "key": "field_62ec055e49d81",
+            "label": "Header Background",
+            "name": "header_background",
             "type": "select",
-            "instructions": "primary : Primary\r\nsecondary : Secondary",
-            "required": 0,
+            "instructions": "",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": [],
-            "default_value": false,
+            "choices": {
+                "primary": "Primary",
+                "secondary": "Secondary"
+            },
+            "default_value": "primary",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -119,5 +122,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658601284
+    "modified": 1659635166
 }
