@@ -308,8 +308,13 @@ body {
 .bg-secondary h5,
 .bg-secondary h6,
 .bg-secondary p,
-.bg-secondary span {
+.bg-secondary span,
+.bg-secondary a:not(.btn) {
     color: var(--secondary_background_text_color);
+}
+
+.bg-secondary a:not(.btn) {
+    text-decoration: underline;
 }
 
 .page-section {

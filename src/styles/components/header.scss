@@ -132,6 +132,10 @@ header {
       padding: 0 10px;
     }
   }
+
+  a:not(.btn) {
+    text-decoration: none;
+  }
 }
 
 .mobile-menu {
