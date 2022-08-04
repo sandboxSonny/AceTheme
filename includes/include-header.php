@@ -25,7 +25,7 @@
                         <?php if ($logo) {
                             echo wp_get_attachment_image($logo, $logo_size, "", array( "class" => "img-fluid" ));
                             if ($header_site_title) {
-                                echo get_bloginfo( 'name' );
+                                echo '<span>' . get_bloginfo( 'name' ) . '</span>';
                             }
                         } else {
                             echo get_bloginfo( 'name' );
