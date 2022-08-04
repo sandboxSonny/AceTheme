@@ -8,6 +8,7 @@
     $header_details = get_field('header_details', 'option');
     $header_details_verticle = get_field('header_details_verticle', 'option');
     $header_details_icons = get_field('header_details_icons', 'option');
+    $header_logo_size = get_field('header_logo_size', 'option');
     $email = get_field('email', 'option');
     $primary_number = get_field('primary_number', 'option');
     $secondary_number = get_field('secondary_number', 'option');
@@ -15,7 +16,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col header-logo">
+        <div class="col header-logo header-logo--<?php echo $header_logo_size; ?>">
             <h1>
                 <a href="<?php echo home_url(); ?>">
                     <?php if ($logo) {
