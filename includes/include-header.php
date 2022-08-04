@@ -10,6 +10,7 @@
     $header_details_verticle = get_field('header_details_verticle', 'option');
     $header_details_icons = get_field('header_details_icons', 'option');
     $header_logo_size = get_field('header_logo_size', 'option');
+    $header_site_title = get_field('header_site_title', 'option');
     $email = get_field('email', 'option');
     $primary_number = get_field('primary_number', 'option');
     $secondary_number = get_field('secondary_number', 'option');
@@ -23,6 +24,9 @@
                     <a href="<?php echo home_url(); ?>">
                         <?php if ($logo) {
                             echo wp_get_attachment_image($logo, $logo_size, "", array( "class" => "img-fluid" ));
+                            if ($header_site_title) {
+                                echo get_bloginfo( 'name' );
+                            }
                         } else {
                             echo get_bloginfo( 'name' );
                         } ?>

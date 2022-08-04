@@ -50,12 +50,22 @@ header {
   }
 }
 
+.bg-secondary .hamburger-icon i {
+  background-color: var(--secondary_button_text_color);
+}
+
 .header-logo {
   display: flex;
   align-items: center;
 
+  a {
+    display: flex;
+    align-items: center;
+  }
+
   img {
     height: auto;
+    margin-right: var(--spacing_md);
   }
 
   h1 {
@@ -131,10 +141,6 @@ header {
       display: inline-block;
       padding: 0 10px;
     }
-  }
-
-  a:not(.btn) {
-    text-decoration: none;
   }
 }
 
