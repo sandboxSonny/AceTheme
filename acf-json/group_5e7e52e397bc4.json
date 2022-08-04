@@ -3,20 +3,23 @@
     "title": "Theme Header Settings",
     "fields": [
         {
-            "key": "field_62bcb38df8e0e",
-            "label": "Mobile Menu Background",
-            "name": "mobile_menu_background",
+            "key": "field_62ec055e49d81",
+            "label": "Header Background",
+            "name": "header_background",
             "type": "select",
-            "instructions": "primary : Primary\r\nsecondary : Secondary",
-            "required": 0,
+            "instructions": "",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": [],
-            "default_value": false,
+            "choices": {
+                "primary": "Primary",
+                "secondary": "Secondary"
+            },
+            "default_value": "primary",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -99,6 +102,51 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_62ec149bea0f8",
+            "label": "Header Logo Size",
+            "name": "header_logo_size",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "small": "Small",
+                "medium: Medium": "medium: Medium",
+                "large: Large": "large: Large"
+            },
+            "default_value": "large",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_62ec17028a4cb",
+            "label": "Header Site Title",
+            "name": "header_site_title",
+            "type": "true_false",
+            "instructions": "This will show the site title next to the logo",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -119,5 +167,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658601284
+    "modified": 1659639604
 }

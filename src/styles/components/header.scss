@@ -50,21 +50,50 @@ header {
   }
 }
 
+.bg-secondary .hamburger-icon i {
+  background-color: var(--secondary_button_text_color);
+}
+
 .header-logo {
   display: flex;
   align-items: center;
 
-  img {
-    max-width: 150px;
-    height: auto;
+  a {
+    display: flex;
+    align-items: center;
+  }
 
-    @media screen and (min-width: 768px) {
-      max-width: 250px;
-    }
+  img {
+    height: auto;
+    margin-right: var(--spacing_md);
   }
 
   h1 {
     margin: 0;
+  }
+}
+
+.header-logo--small img {
+  max-width: 150px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 150px;
+  }
+}
+
+.header-logo--medium img {
+  max-width: 150px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 200px;
+  }
+}
+
+.header-logo--large img {
+  max-width: 150px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 250px;
   }
 }
 

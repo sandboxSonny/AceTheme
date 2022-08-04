@@ -24,6 +24,8 @@
 
         --content_width: <?php the_field('content_width', 'option'); ?>;
 
+        --font_family: <?php if (get_field('font_family', 'option')) { echo get_field('font_family', 'option'); } else { echo 'Mulish'; }?>;
+
         --spacing_sm: 16px;
         --spacing_md: 24px;
         --spacing_lg: 32px;

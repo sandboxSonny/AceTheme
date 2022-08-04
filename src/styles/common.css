@@ -308,7 +308,8 @@ body {
 .bg-secondary h5,
 .bg-secondary h6,
 .bg-secondary p,
-.bg-secondary span {
+.bg-secondary span,
+.bg-secondary a:not(.btn) {
     color: var(--secondary_background_text_color);
 }
 
@@ -339,10 +340,8 @@ body {
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap');
-
 * {
-    font-family: 'Mulish', sans-serif;
+    font-family: var(--font_family);
 }
 
 h1 {
