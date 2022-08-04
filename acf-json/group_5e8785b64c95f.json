@@ -29,6 +29,25 @@
             "placeholder": ""
         },
         {
+            "key": "field_62ec1ac25800e",
+            "label": "Font Family",
+            "name": "font_family",
+            "type": "text",
+            "instructions": "This is the font used for the entire site. You can just type in which font you would like e.g Poppins or Dancing Script\r\n\r\nThe fonts you can use are https:\/\/fonts.google.com\/",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61bf575360c84",
             "label": "Logo",
             "name": "logo",
@@ -335,5 +354,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658433857
+    "modified": 1659640781
 }
