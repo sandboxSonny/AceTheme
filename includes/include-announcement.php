@@ -3,7 +3,9 @@
 <?php
     $enable_details = get_field('announcement_enable_details', 'option');
     $email = get_field('email', 'option');
+    $primary_number_label = get_field('primary_number_label', 'option');
     $primary_number = get_field('primary_number', 'option');
+    $secondary_number_label = get_field('secondary_number_label', 'option');
     $secondary_number = get_field('secondary_number', 'option');
     $content = get_field('announcement_content', 'option');
     $background = get_field('announcement_background', 'option');
@@ -25,10 +27,20 @@
                             echo '<a href="mailto:' . $email  .  '">' . $email . '</a>';
                         }
                         if ($primary_number) {
-                            echo '<a href="tel:' . $primary_number . '">' . $primary_number . '</a>';
+                            echo '<a href="tel:' . $primary_number . '">';
+                                if ($primary_number_label) {
+                                    echo '<strong>' . $primary_number_label . '</strong>';
+                                }
+                                echo $primary_number;
+                            echo '</a>';
                         }
                         if ($secondary_number) {
-                            echo '<a href="tel:' . $secondary_number . '">' . $secondary_number . '</a>';
+                            echo '<a href="tel:' . $secondary_number . '">';
+                                if ($secondary_number_label) {
+                                    echo '<strong>' . $secondary_number_label . '</strong>';
+                                }
+                                echo $secondary_number;
+                            echo '</a>';
                         }
                     echo '</div>';
                 }
