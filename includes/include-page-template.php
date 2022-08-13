@@ -21,6 +21,8 @@
                 get_template_part('components/component', 'tabbed-content');
             elseif( get_row_layout() == 'reviews' ):
                 get_template_part('components/component', 'reviews');
+            elseif( get_row_layout() == 'articles' ):
+                get_template_part('components/component', 'articles');
             endif;
         endwhile; 
     endif; 
