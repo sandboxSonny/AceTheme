@@ -90,6 +90,25 @@
             "append": ""
         },
         {
+            "key": "field_62f7b328273f5",
+            "label": "Primary Number Label",
+            "name": "primary_number_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61bf5c8f53b75",
             "label": "Primary Number",
             "name": "primary_number",
@@ -109,6 +128,25 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_62f7b33a273f6",
+            "label": "Secondary Number Label",
+            "name": "secondary_number_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_61bf5c9d53b76",
@@ -354,5 +392,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1659640781
+    "modified": 1660400467
 }

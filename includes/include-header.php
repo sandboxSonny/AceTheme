@@ -12,7 +12,9 @@
     $header_logo_size = get_field('header_logo_size', 'option');
     $header_site_title = get_field('header_site_title', 'option');
     $email = get_field('email', 'option');
+    $primary_number_label = get_field('primary_number_label', 'option');
     $primary_number = get_field('primary_number', 'option');
+    $secondary_number_label = get_field('secondary_number_label', 'option');
     $secondary_number = get_field('secondary_number', 'option');
 ?>
 
@@ -89,18 +91,52 @@
 </div>
 
 <div class="mobile-menu" id="mobile_menu">
-    <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
-    <?php if (get_field('mobile_menu_details', 'option')) { ?>
-        <ul class="mobile-menu--footer">
-            <?php if (get_field('email', 'option')) { ?>
-                <li><a href="mailto:<?php the_field('email', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php get_template_part('includes/include', 'icon', array('icon' => 'email')); ?></span><?php the_field('email', 'option'); ?></a></li>
-            <?php } ?>
-            <?php if (get_field('primary_number', 'option')) { ?>
-                <li><a href="<?php the_field('primary_number', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php get_template_part('includes/include', 'icon', array('icon' => 'phone')); ?></span><?php the_field('primary_number', 'option'); ?></a></li>
-            <?php } ?>
-            <?php if (get_field('secondary_number', 'option')) { ?>
-                <li><a href="<?php the_field('secondary_number', 'option'); ?>"><span class="mobile-menu--footer-icon"><?php get_template_part('includes/include', 'icon', array('icon' => 'phone')); ?></span><?php the_field('secondary_number', 'option'); ?></a></li>
-            <?php } ?>
-        </ul>
-    <?php } ?>
+    <?php
+        wp_nav_menu( array( 'theme_location' => 'main_menu' ) );
+        if ($mobile_menu_details) {
+            echo '<ul class="mobile-menu--footer">';
+                if ($email) {
+                    echo '<li>';
+                        echo '<a href="mailto:' . $email .'">';
+                            echo '<span class="mobile-menu--footer-icon">';
+                                get_template_part('includes/include', 'icon', array('icon' => 'email'));
+                            echo '</span>';
+
+                            echo $email;
+                        echo '</a>';
+                    echo '</li>';
+                }
+                if ($primary_number) {
+                    echo '<li>';
+                        echo '<a href="' . $primary_number . '">';
+                            echo '<span class="mobile-menu--footer-icon">';
+                                get_template_part('includes/include', 'icon', array('icon' => 'phone'));
+                            echo '</span>';
+
+                            if ($primary_number_label) {
+                                echo '<strong>' . $primary_number_label . '</strong>';
+                            }
+
+                            echo $primary_number;
+                        echo '</a>';
+                    echo '</li>';
+                }
+                if ($secondary_number) {
+                    echo '<li>';
+                        echo '<a href="' . $secondary_number . '">';
+                            echo '<span class="mobile-menu--footer-icon">';
+                                get_template_part('includes/include', 'icon', array('icon' => 'phone'));
+                            echo '</span>';
+
+                            if ($secondary_number_label) {
+                                echo '<strong>' . $secondary_number_label . '</strong>';
+                            }
+
+                            echo $secondary_number;
+                        echo '</a>';
+                    echo '</li>';
+                }
+            echo '</ul>';
+        }
+    ?>
 </div>
