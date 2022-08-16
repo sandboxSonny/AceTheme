@@ -76,33 +76,26 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'general-settings',
 		'position' 		=> 4
 	));
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Popup Settings',
-		'menu_title'	=> 'Popup',
-		'parent_slug'	=> 'general-settings',
-		'position' 		=> 5
-	));
 
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Announcement Settings',
 		'menu_title'	=> 'Announcement',
 		'parent_slug'	=> 'general-settings',
-		'position' 		=> 6
+		'position' 		=> 5
 	));
 
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Custom Posts Settings',
 		'menu_title'	=> 'Custom Posts',
 		'parent_slug'	=> 'general-settings',
-		'position' 		=> 7
+		'position' 		=> 6
 	));
 	
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Header Settings',
 		'menu_title'	=> 'Header',
 		'parent_slug'	=> 'general-settings',
-		'position' 		=> 8
+		'position' 		=> 7
 	));
 }
 
