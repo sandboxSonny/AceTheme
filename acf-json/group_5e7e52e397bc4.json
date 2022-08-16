@@ -7,7 +7,7 @@
             "label": "Header Background",
             "name": "header_background",
             "type": "select",
-            "instructions": "",
+            "instructions": "Background colour for the header",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -32,7 +32,7 @@
             "label": "Mobile Menu Details",
             "name": "mobile_menu_details",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "To show the site email and numbers at the bottom of the mobile menu",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -51,7 +51,7 @@
             "label": "Header Details",
             "name": "header_details",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "Show the site email and numbers in the site header above the menu",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -70,9 +70,17 @@
             "label": "Header Details Verticle",
             "name": "header_details_verticle",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "Force each new detail on a new line",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62cf2b843aefb",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -89,9 +97,17 @@
             "label": "Header Details Icons",
             "name": "header_details_icons",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "Show icons next to the header email and numbers",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62cf2b843aefb",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -108,7 +124,7 @@
             "label": "Header Logo Size",
             "name": "header_logo_size",
             "type": "select",
-            "instructions": "",
+            "instructions": "Select the logo sizes to appear in the header",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -167,5 +183,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660408753
+    "modified": 1660691279
 }
