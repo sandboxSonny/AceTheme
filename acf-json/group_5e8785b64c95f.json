@@ -7,7 +7,7 @@
             "label": "Content Width",
             "name": "content_width",
             "type": "select",
-            "instructions": "",
+            "instructions": "Choose a page width for the content",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -52,7 +52,7 @@
             "label": "Logo",
             "name": "logo",
             "type": "image",
-            "instructions": "",
+            "instructions": "Logo for the site if there is no logo text will be used as the site name",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -76,7 +76,7 @@
             "label": "Email",
             "name": "email",
             "type": "email",
-            "instructions": "",
+            "instructions": "Site contact email to appear",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -94,7 +94,7 @@
             "label": "Primary Number Label",
             "name": "primary_number_label",
             "type": "text",
-            "instructions": "",
+            "instructions": "If the primary number contains a label",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -113,7 +113,7 @@
             "label": "Primary Number",
             "name": "primary_number",
             "type": "number",
-            "instructions": "",
+            "instructions": "Site primary phone number",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -134,7 +134,7 @@
             "label": "Secondary Number Label",
             "name": "secondary_number_label",
             "type": "text",
-            "instructions": "",
+            "instructions": "If the secondary number requires a label",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -153,7 +153,7 @@
             "label": "Secondary Number",
             "name": "secondary_number",
             "type": "number",
-            "instructions": "",
+            "instructions": "Site primary phone number",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -168,210 +168,6 @@
             "min": "",
             "max": "",
             "step": ""
-        },
-        {
-            "key": "field_62211adf4ffe6",
-            "label": "Colours",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Below are a list of colours to customise your theme with:",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_61c11b5362c7f",
-            "label": "Primary Colour",
-            "name": "primary_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_61c11b6b83cd2",
-            "label": "Secondary Colour",
-            "name": "secondary_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": false,
-            "return_format": "string"
-        },
-        {
-            "key": "field_6221176b84f4d",
-            "label": "Background Colour",
-            "name": "background_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_622117fb34c64",
-            "label": "Background Text Colour",
-            "name": "background_text_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_6221178084f4e",
-            "label": "Secondary Background Colour",
-            "name": "secondary_background_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_6221181c34c65",
-            "label": "Secondary Background Text Colour",
-            "name": "secondary_background_text_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_6221179d84f4f",
-            "label": "Text Colour",
-            "name": "text_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_622119f0e4199",
-            "label": "Primary Button Colour",
-            "name": "primary_button_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_62211a11e419a",
-            "label": "Primary Button Text Colour",
-            "name": "primary_button_text_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_62211a24e419b",
-            "label": "Secondary Button Colour",
-            "name": "secondary_button_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
-            "key": "field_62211a34e419c",
-            "label": "Secondary Button Text Colour",
-            "name": "secondary_button_text_colour",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string"
         }
     ],
     "location": [
@@ -392,5 +188,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660400467
+    "modified": 1660691127
 }

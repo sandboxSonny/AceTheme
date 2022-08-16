@@ -7,7 +7,7 @@
             "label": "Enable",
             "name": "announcement_enable",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "Show the announcement bar above the header",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -26,7 +26,7 @@
             "label": "Content",
             "name": "announcement_content",
             "type": "text",
-            "instructions": "",
+            "instructions": "Add text content to the left of the announcement bar on desktop",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -45,7 +45,7 @@
             "label": "Enable Details",
             "name": "announcement_enable_details",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "Show the contact details to the right of the announcement on desktop",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -64,7 +64,7 @@
             "label": "Announcement Background",
             "name": "announcement_background",
             "type": "select",
-            "instructions": "",
+            "instructions": "Choose the announcement background colour",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -103,5 +103,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1659640042
+    "modified": 1660690653
 }

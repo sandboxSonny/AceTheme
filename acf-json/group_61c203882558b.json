@@ -7,7 +7,7 @@
             "label": "Custom Post Types",
             "name": "custom_post_types",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "This will add a custom post type for posts, e.g reviews or projects.\r\n\r\nReview post types will automatically include the start setting.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -99,5 +99,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657484755
+    "modified": 1660690722
 }
