@@ -1,6 +1,9 @@
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-flex-columns.css">
+
 <?php 
     $background = get_sub_field('background');
     $text_alignment = get_sub_field('text_alignment');
+    $icons = get_sub_field('icons');
     $columns = have_rows('columns');
 
     if ($columns) {
@@ -12,12 +15,19 @@
                         $image_size = 'medium';
                         $title = get_sub_field('title');
                         $content = get_sub_field('content');
-                        echo '<div class="col-12 col-md column-area text-' . $text_alignment . '">';
+                        if ($icons) {
+                            $icons_class = ' column-area--icons';
+                        } else {
+                            $icons_class = '';
+                        }
+                        echo '<div class="col-12 col-md column-area column-area--alignment-' . $text_alignment . $icons_class . '">';
                             if ($image) {
-                                echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid" ));
+                                echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid column-area__image" ));
                             }
-                            echo '<h3>' . $title . '</h3>';
-                            echo ' <p>' . $content . '</p>';
+                            echo '<div>';
+                                echo '<h3>' . $title . '</h3>';
+                                echo ' <p>' . $content . '</p>';
+                            echo '</div>';
                         echo '</div>';
                     endwhile;
                 echo '</div>';
