@@ -666,6 +666,25 @@
                                     "new_lines": ""
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_6300f1fbbdd8c",
+                            "label": "Icons",
+                            "name": "icons",
+                            "type": "true_false",
+                            "instructions": "Make the images fixed 200px for icon images",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         }
                     ],
                     "min": "",
@@ -1238,5 +1257,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660401487
+    "modified": 1661006381
 }
