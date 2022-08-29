@@ -103,6 +103,13 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'general-settings',
 		'position' 		=> 8
 	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'SEO',
+		'menu_title'	=> 'SEO',
+		'parent_slug'	=> 'general-settings',
+		'position' 		=> 9
+	));
 }
 
 function change_my_title( $title ){
