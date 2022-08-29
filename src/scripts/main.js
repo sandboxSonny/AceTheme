@@ -20,9 +20,7 @@ for (const tabbedItem of objects.tabbedItems) {
   tabbedItem.addEventListener('click', function(){
     var thisItem = tabbedItem.getAttribute('data-tab');
     for (const tabbedPanel of objects.tabbedPanels) {
-console.log(tabbedPanel);
-
-        tabbedPanel.classList.remove('is-active');
+      tabbedPanel.classList.remove('is-active');
     }
     for (const tabbedItemInner of objects.tabbedItems) {
       tabbedItemInner.classList.remove('is-active');
