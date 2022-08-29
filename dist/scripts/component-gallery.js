@@ -1,0 +1,1 @@
+var msnry=new Masonry(document.querySelector(".gallery"),{columnWidth:".gallery__sizer",itemSelector:".gallery__item",gutter:".gallery__gutter",percentPosition:!0});const lightbox=GLightbox({});

@@ -23,6 +23,8 @@
                 get_template_part('components/component', 'reviews');
             elseif( get_row_layout() == 'articles' ):
                 get_template_part('components/component', 'articles');
+            elseif( get_row_layout() == 'gallery' ):
+                get_template_part('components/component', 'gallery');
             endif;
         endwhile; 
     endif; 

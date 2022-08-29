@@ -10,7 +10,8 @@ var gulp = require( 'gulp' ),
     rename = require( 'gulp-rename' );
 
 // Variables
-var jsSRC = 'src/scripts/*.js',
+var jsComponentsSRC = 'src/scripts/components/*.js',
+    jsSRC = 'src/scripts/*.js',
     jsDEST = 'dist/scripts/';
 
 var cssComponentsSRC = 'src/styles/components/*.scss',
@@ -55,6 +56,16 @@ function javascript() {
         .pipe(gulp.dest(jsDEST));
 }
 
+function javascriptComponents() {
+    return gulp.src(jsComponentsSRC)
+        .pipe(uglify())
+        .pipe(lineec())
+        .pipe(rename({
+            prefix: "component-"
+        }))
+        .pipe(gulp.dest(jsDEST));
+}
+
 // Images Function
 function imgmin() {
     return gulp.src(imgSRC)
@@ -74,16 +85,17 @@ function imgmin() {
 }
 
 var styles = gulp.series(cssCommon, cssComponents);
+var javascripts = gulp.series(cssCommon, javascriptComponents);
 
 // Watch Function
 function watch() {
   gulp.watch(['src/styles/**/*.scss', 'src/styles/*.css'], styles);
-  gulp.watch(jsSRC, javascript);
+  gulp.watch(['src/scripts/**/*.js', 'src/scripts/*.js'], javascripts);
   gulp.watch(imgSRC, imgmin);
 }
 
 var build = gulp.parallel(watch);
 gulp.task('default', build);
-gulp.task('javascript', javascript);
+gulp.task('javascript', javascripts);
 gulp.task('img', imgmin);
 gulp.task('styles', styles);
