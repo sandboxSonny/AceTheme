@@ -1,0 +1,17 @@
+.column-area {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.column-area--alignment-left {
+    justify-content: flex-start;
+}
+
+.column-area--alignment-right {
+    justify-content: flex-end;
+}
+
+.column-area--icons .column-area__image {
+    max-width: 150px;
+}

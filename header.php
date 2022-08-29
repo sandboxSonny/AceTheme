@@ -10,6 +10,8 @@
 
       echo $tag_manager_head;
 
+      get_template_part('includes/include', 'seo');
+
       do_action('wp_head');
 
       echo '<link rel="stylesheet" href="' . get_template_directory_uri() . '/dist/styles/common.min.css">';
