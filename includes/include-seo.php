@@ -2,7 +2,7 @@
     $favicon = get_field('favicon', 'option');
     $keywords = get_field('keywords', 'option');
     $author = get_field('author', 'option');
-    $description = get_field('description', 'option');
+    $description = get_field('description');
     $seo_image = get_field('seo_image', 'option');
     $theme_color = get_field('background_colour', 'option');
     $page_title = get_the_title();
