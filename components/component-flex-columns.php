@@ -22,9 +22,11 @@
                         }
                         echo '<div class="col-12 col-md column-area column-area--alignment-' . $text_alignment . $icons_class . '">';
                             if ($image) {
-                                echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid column-area__image" ));
+                                echo '<div>';
+                                    echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid column-area__image" ));
+                                echo '</div>';
                             }
-                            echo '<div>';
+                            echo '<div class="text-' . $text_alignment . '">';
                                 echo '<h3>' . $title . '</h3>';
                                 echo ' <p>' . $content . '</p>';
                             echo '</div>';
