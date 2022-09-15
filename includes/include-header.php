@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-header-standard.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-header.css">
 <script src="<?php echo get_template_directory_uri() ?>/dist/scripts/component-header.js" defer></script>
 
 <?php
@@ -6,6 +6,7 @@
     $logo = get_field('logo', 'option');
     $logo_size = 'small';
     $mobile_menu_details = get_field('mobile_menu_details', 'option');
+    $header_type = get_field('header_type', 'option');
     $header_background = get_field('header_background', 'option');
     $header_details = get_field('header_details', 'option');
     $header_details_verticle = get_field('header_details_verticle', 'option');
@@ -17,18 +18,63 @@
     $primary_number = get_field('primary_number', 'option');
     $secondary_number_label = get_field('secondary_number_label', 'option');
     $secondary_number = get_field('secondary_number', 'option');
+
+    function menu() {
+        $locations = get_nav_menu_locations();
+        
+        $menu = get_term( $locations['main_menu'], 'nav_menu' );
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+        echo '<ul class="nav navbar-nav">';
+            
+            foreach( $menu_items as $menu_item ) {
+                if( $menu_item->menu_item_parent == 0 ) {
+                    $parent = $menu_item->ID;
+                    $menu_array = array();
+                    $submenu_array = array();
+
+                    foreach( $menu_items as $submenu ) {
+                        if( $submenu->menu_item_parent == $parent ) {
+                            $bool = true;
+                            $menu_array[] = '<li class="menu-item"><a href="' . $submenu->url . '">' . $submenu->title . '</a></li>' ."\n";
+
+                            foreach( $menu_items as $subsubmenu ) {
+                                if( $submenu->menu_item_parent == $parent ) {
+                                    $bool = true;
+                                    $submenu_array[] = '<li class="menu-item"><a href="' . $submenu->url . '">' . $submenu->title . '</a></li>' ."\n";
+                                }
+                            }
+                        }
+                    }
+
+                    if( $bool == true && count( $menu_array ) > 0 ) {
+                        echo '<li class="menu-item menu-item-has-children">';
+                            echo '<a href="' . $menu_item->url . '">' . $menu_item->title . get_template_part('includes/include', 'icon', array('icon' => 'chevron-down')) . '</a>';
+                        
+                            echo '<ul class="dropdown-menu">';
+                                echo implode( "\n", $menu_array );
+                            echo '</ul>';
+                    } else {
+                        echo '<li class="menu-item">';
+                            echo '<a href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
+                    }
+                }
+                echo '</li>';
+            }
+        echo '</ul>';
+    }
 ?>
 
-<div class="bg-<?php echo $header_background; ?>">
+<div class="bg-<?php echo $header_background; ?> header--<?php echo $header_type ?>">
     <div class="container">
         <div class="row">
-            <div class="col col-md-12 header-logo header-logo--<?php echo $header_logo_size; ?> header-logo--title-<?php echo $header_site_title; ?>">
-                <h1>
-                    <a href="<?php echo home_url(); ?>">
+            <div class="col header-logo header-logo--<?php echo $header_logo_size; ?>">
+                <h1 class="header-logo__heading">
+                    <a href="<?php echo home_url(); ?>" class="header-logo__link">
                         <?php if ($logo) {
-                            echo wp_get_attachment_image($logo, $logo_size, "", array( "class" => "img-fluid" ));
+                            echo wp_get_attachment_image($logo, $logo_size, "", array( "class" => "img-fluid header-logo__image" ));
                             if ($header_site_title) {
-                                echo '<span>' . get_bloginfo( 'name' ) . '</span>';
+                                echo '<span class="header-logo__title">' . get_bloginfo( 'name' ) . '</span>';
                             }
                         } else {
                             echo get_bloginfo( 'name' );
@@ -36,7 +82,7 @@
                     </a>
                 </h1>
             </div>
-            <div class="col col-md-12 header-right">
+            <div class="col d-flex flex-1 flex-wrap justify-content-end align-items-center">
                 <div class="d-none d-md-block w-100">
                     <?php if ($header_details) {
                         if ($header_details_verticle) {
@@ -71,11 +117,9 @@
                             }
                         echo '</div>';
                     } ?>
-                    <div class="header-menu">
-                        <nav id="main-menu">
-                            <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
-                        </nav>
-                    </div>
+                    <nav class="header-menu" id="main-menu">
+                        <?php menu(); ?>
+                    </nav>
                 </div>
                 <div class="d-flex d-md-none w-100 h-100 justify-content-end align-items-center">
                     <a href="#" class="toggle_menu">
@@ -93,7 +137,8 @@
 
 <div class="mobile-menu" id="mobile_menu">
     <?php
-        wp_nav_menu( array( 'theme_location' => 'main_menu' ) );
+        menu();
+
         if ($mobile_menu_details) {
             echo '<ul class="mobile-menu--footer">';
                 if ($email) {

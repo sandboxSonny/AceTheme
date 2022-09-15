@@ -1,28 +1,9 @@
 header {
   border-bottom: 4px solid var(--color_primary);
-
-  h3 {
-    text-align: right;
-    margin-bottom: 0;
-
-    &:last-of-type {
-      margin-top: 0;
-    }
-
-    a {
-      color: #000;
-    }
-  }
 }
 
-.header-menu {
-  ul {
-    li {
-      &:last-of-type {
-        padding-right: 0;
-      }
-    }
-  }
+.menu-item:last-of-type {
+  padding-right: 0;
 }
 
 .hamburger-icon {
@@ -57,28 +38,28 @@ header {
 .header-logo {
   display: flex;
   align-items: center;
+}
 
-  a {
-    display: flex;
-    align-items: center;
-  }
+.header-logo__title {
+  display: none;
 
-  img {
-    height: auto;
-    margin-right: var(--spacing_md);
+  @media screen and (min-width: 768px) {
+    display: block;
   }
+}
 
-  h1 {
-    margin: 0;
-  }
-  
-  span {
-    display: none;
+.header-logo__link {
+  display: flex;
+  align-items: center;
+}
 
-    @media screen and (min-width: 768px) {
-      display: block;
-    }
-  }
+.header-logo__image {
+  height: auto;
+  margin-right: var(--spacing_md);
+}
+
+.header-logo__heading {
+  margin: 0;
 }
 
 .header-logo--small img {
@@ -137,65 +118,104 @@ header {
   }
 }
 
-.header-menu {
+.navbar-nav {
+  list-style: none;
   display: flex;
   justify-content: flex-end;
-  height: 100%;
+  flex-wrap: wrap;
+}
 
-  ul {
-    list-style: none;
+.menu-item {
+  display: inline-block;
+  padding: 0 10px;
+  width: 100%;
 
-    li {
-      display: inline-block;
-      padding: 0 10px;
-    }
+  @media screen and (min-width: 768px) {
+    width: auto;
   }
 }
 
 .menu-item-has-children {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  svg {
+    width: 20px;
+    margin-left: auto;
+    order: 2;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 10px;
+    }
+  }
+
+  path {
+    fill: var(--color_primary);
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
 }
 
-.sub-menu {
-  position: absolute;
-  top: calc(100% + 10px);
-  right: calc(100% - 35px);
+.dropdown-menu {
+  position: static;
   padding: calc(var(--spacing_sm) / 2) var(--spacing_sm);
-  background-color: var(--secondary_background_color);
   border-radius: 3px;
-  opacity: 0;
   transform: translateY(-5px);
   pointer-events: none;
   transition: all 0.2s ease-in-out;
-  width: 150px;
-
-  &::before {
-    content: '';
-    width: 0;
-    height: 0;
-    display: inline-block;
-    border: 10px solid transparent;
-    border-bottom-color: var(--secondary_background_color);
-    position: absolute;
-    top: -20px;
-    right: 10px;
-  }
+  width: 100%;
+  order: 3;
 
   .menu-item {
     padding: 0;
+    border-bottom: 0;
     a {
       display: block;
       padding: calc(var(--spacing_sm) / 2) 0;
       color: var(--secondary_background_text_color);
     }
   }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: calc(100% - 35px);
+    width: 150px;
+    background-color: var(--secondary_background_color);
+    opacity: 0;
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      display: inline-block;
+      border: 10px solid transparent;
+      border-bottom-color: var(--secondary_background_color);
+      position: absolute;
+      top: -20px;
+      right: 10px;
+    }
+
+    .menu-item {
+      border-bottom: 1px solid var(--secondary_background_text_color);
+    }
+  }
 }
 
-.menu-item-has-children--active .sub-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all;
-  transition: all 0.2s ease-in-out;
+.menu-item-has-children--active {
+  .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+    transition: all 0.2s ease-in-out;
+  }
+
+  svg {
+    transform: rotate(180deg);
+  }
 }
 
 .mobile-menu {
@@ -206,7 +226,7 @@ header {
   z-index: 2;
   top: 0;
   left: calc(-80vw - 30px);
-  background-color: var(--color_primary);
+  background-color: var(--secondary_background_color);
   height: 100%;
   width: 80vw;
   padding: 15px;
@@ -219,13 +239,17 @@ header {
   }
 
   li {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--secondary_background_text_color);
   }
 
   a {
     display: flex;
-    color: #fff;
+    color: var(--secondary_background_text_color);
     padding: 10px 5px;
+  }
+
+  path {
+    fill: var(--secondary_background_text_color);
   }
 
   &.is-active {

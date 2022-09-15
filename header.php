@@ -36,10 +36,7 @@
         if (get_field('announcement_enable', 'option')) {
           get_template_part('includes/include', 'announcement');
         }
-        if (get_field('header_type', 'option') == 'inline') {
-          get_template_part('includes/include', 'header-inline');
-        } else {
-          get_template_part('includes/include', 'header-standard');
-        }
+        
+        get_template_part('includes/include', 'header');
       ?>
     </header>
