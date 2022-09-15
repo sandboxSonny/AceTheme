@@ -82,7 +82,7 @@
                     </a>
                 </h1>
             </div>
-            <div class="col d-flex flex-1 flex-wrap justify-content-end align-items-center">
+            <div class="col header-right">
                 <div class="d-none d-md-block w-100">
                     <?php if ($header_details) {
                         if ($header_details_verticle) {
