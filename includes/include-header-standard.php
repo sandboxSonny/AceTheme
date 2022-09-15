@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-header.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-header-standard.css">
 
 <?php
     $background = get_field('background', 'option');
@@ -21,7 +21,7 @@
 <div class="bg-<?php echo $header_background; ?>">
     <div class="container">
         <div class="row">
-            <div class="col header-logo header-logo--<?php echo $header_logo_size; ?>">
+            <div class="col col-md-12 header-logo header-logo--<?php echo $header_logo_size; ?> header-logo--title-<?php echo $header_site_title; ?>">
                 <h1>
                     <a href="<?php echo home_url(); ?>">
                         <?php if ($logo) {
@@ -35,7 +35,7 @@
                     </a>
                 </h1>
             </div>
-            <div class="col d-flex flex-1 flex-wrap justify-content-end align-items-center">
+            <div class="col col-md-12 header-right">
                 <div class="d-none d-md-block w-100">
                     <?php if ($header_details) {
                         if ($header_details_verticle) {
@@ -70,7 +70,7 @@
                             }
                         echo '</div>';
                     } ?>
-                    <div class="header-menu d-flex align-items-center">
+                    <div class="header-menu">
                         <nav id="main-menu">
                             <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
                         </nav>
