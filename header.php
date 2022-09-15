@@ -36,6 +36,7 @@
         if (get_field('announcement_enable', 'option')) {
           get_template_part('includes/include', 'announcement');
         }
+        
         get_template_part('includes/include', 'header');
       ?>
     </header>

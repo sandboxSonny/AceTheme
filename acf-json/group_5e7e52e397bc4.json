@@ -3,6 +3,31 @@
     "title": "Theme Header Settings",
     "fields": [
         {
+            "key": "field_632323e431b03",
+            "label": "Header Type",
+            "name": "header_type",
+            "type": "select",
+            "instructions": "Change the header desktop design",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "standard": "Standard",
+                "inline": "Inline"
+            },
+            "default_value": "inline",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_62ec055e49d81",
             "label": "Header Background",
             "name": "header_background",
@@ -183,5 +208,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660691279
+    "modified": 1663247404
 }
