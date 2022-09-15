@@ -1,1 +1,1 @@
-const menuItems=document.querySelectorAll(".menu-item-has-children");for(const a of menuItems)a.addEventListener("click",function(e){e.preventDefault(),a.classList.toggle("menu-item-has-children--active")});
+const menuItems=document.querySelectorAll(".menu-item-has-children");for(const a of menuItems)a.addEventListener("click",function(e){e.preventDefault(),a.classList.toggle("menu-item-has-children--active"),window.matchMedia("(max-width: 768px)").matches&&((e=a.querySelector(".dropdown-menu")).style.maxHeight?e.style.maxHeight=null:e.style.maxHeight=e.scrollHeight+"px")});
