@@ -123,6 +123,7 @@ header {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  padding: 0;
 }
 
 .menu-item {
@@ -244,6 +245,7 @@ ul.dropdown-menu {
     transform: translateY(0);
     pointer-events: all;
     transition: all 0.2s ease-in-out;
+    z-index: 2;
   }
 
   svg {
@@ -292,5 +294,34 @@ ul.dropdown-menu {
     opacity: 1;
     pointer-events: all;
     transition: opacity 0.5s;
+  }
+}
+
+.header-right {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header--standard {
+    .header-right,
+    .header-logo {
+      width: 100%;
+      flex: none;
+      justify-content: center;
+    }
+  
+    .navbar-nav,
+    .header-contact,
+    .header-contact a {
+      justify-content: center;
+    }
+  
+    .header-logo__image {
+      margin-right: auto;
+    }
   }
 }
