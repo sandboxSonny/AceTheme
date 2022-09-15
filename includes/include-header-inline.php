@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/dist/styles/component-header-inline.css">
+<script src="<?php echo get_template_directory_uri() ?>/dist/scripts/component-header.js" defer></script>
 
 <?php
     $background = get_field('background', 'option');

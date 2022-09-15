@@ -1,0 +1,1 @@
+const menuItems=document.querySelectorAll(".menu-item-has-children");for(const a of menuItems)a.addEventListener("click",function(e){e.preventDefault(),a.classList.toggle("menu-item-has-children--active")});
