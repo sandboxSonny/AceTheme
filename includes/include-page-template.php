@@ -25,6 +25,8 @@
                 get_template_part('components/component', 'articles');
             elseif( get_row_layout() == 'gallery' ):
                 get_template_part('components/component', 'gallery');
+            elseif( get_row_layout() == 'video' ):
+                get_template_part('components/component', 'video');
             endif;
         endwhile; 
     endif; 
