@@ -1415,6 +1415,107 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6362cc5ff38c6": {
+                    "key": "layout_6362cc5ff38c6",
+                    "name": "slideshow",
+                    "label": "Slideshow",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6362cc8cf38ca",
+                            "label": "Height",
+                            "name": "height",
+                            "type": "select",
+                            "instructions": "Height of the slideshow section, images will be cropped on any size but auto",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "small": "Small",
+                                "medium": "Medium",
+                                "large": "Large",
+                                "auto": "Auto"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_6362dc35a10a5",
+                            "label": "Page Width",
+                            "name": "page_width",
+                            "type": "true_false",
+                            "instructions": "Will make the content inline rather than full width",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_6362cc64f38c7",
+                            "label": "Slides",
+                            "name": "slides",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6362cc70f38c8",
+                                    "label": "Slide Image",
+                                    "name": "slide_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -1442,5 +1543,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663349493
+    "modified": 1667423458
 }
