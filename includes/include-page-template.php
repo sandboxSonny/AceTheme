@@ -27,6 +27,8 @@
                 get_template_part('components/component', 'gallery');
             elseif( get_row_layout() == 'video' ):
                 get_template_part('components/component', 'video');
+            elseif( get_row_layout() == 'slideshow' ):
+                get_template_part('components/component', 'slideshow');
             endif;
         endwhile; 
     endif; 
