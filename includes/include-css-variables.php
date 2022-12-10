@@ -24,8 +24,8 @@
 
         --content_width: <?php the_field('content_width', 'option'); ?>;
 
-        --post_radius: <?php the_field('post_radius', 'option'); ?>;
-        --button_radius: <?php the_field('button_radius', 'option'); ?>;
+        --post_radius: <?php the_field('post_radius', 'option'); ?>px;
+        --button_radius: <?php the_field('button_radius', 'option'); ?>px;
 
         --font_family: <?php if (get_field('font_family', 'option')) { echo get_field('font_family', 'option'); } else { echo 'Mulish'; }?>;
 
