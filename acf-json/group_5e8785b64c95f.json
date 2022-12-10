@@ -6,6 +6,7 @@
             "key": "field_62d9b0c2c9f51",
             "label": "Content Width",
             "name": "content_width",
+            "aria-label": "",
             "type": "select",
             "instructions": "Choose a page width for the content",
             "required": 1,
@@ -32,6 +33,7 @@
             "key": "field_62ec1ac25800e",
             "label": "Font Family",
             "name": "font_family",
+            "aria-label": "",
             "type": "text",
             "instructions": "This is the font used for the entire site. You can just type in which font you would like e.g Poppins or Dancing Script\r\n\r\nThe fonts you can use are https:\/\/fonts.google.com\/",
             "required": 0,
@@ -51,6 +53,7 @@
             "key": "field_61bf575360c84",
             "label": "Logo",
             "name": "logo",
+            "aria-label": "",
             "type": "image",
             "instructions": "Logo for the site if there is no logo text will be used as the site name",
             "required": 0,
@@ -75,6 +78,7 @@
             "key": "field_61bf5c7e53b74",
             "label": "Email",
             "name": "email",
+            "aria-label": "",
             "type": "email",
             "instructions": "Site contact email to appear",
             "required": 0,
@@ -93,6 +97,7 @@
             "key": "field_62f7b328273f5",
             "label": "Primary Number Label",
             "name": "primary_number_label",
+            "aria-label": "",
             "type": "text",
             "instructions": "If the primary number contains a label",
             "required": 0,
@@ -112,6 +117,7 @@
             "key": "field_61bf5c8f53b75",
             "label": "Primary Number",
             "name": "primary_number",
+            "aria-label": "",
             "type": "number",
             "instructions": "Site primary phone number",
             "required": 0,
@@ -133,6 +139,7 @@
             "key": "field_62f7b33a273f6",
             "label": "Secondary Number Label",
             "name": "secondary_number_label",
+            "aria-label": "",
             "type": "text",
             "instructions": "If the secondary number requires a label",
             "required": 0,
@@ -152,6 +159,7 @@
             "key": "field_61bf5c9d53b76",
             "label": "Secondary Number",
             "name": "secondary_number",
+            "aria-label": "",
             "type": "number",
             "instructions": "Site primary phone number",
             "required": 0,
@@ -168,6 +176,50 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_6394835414dd4",
+            "label": "Button Radius",
+            "name": "button_radius",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6394837814dd5",
+            "label": "Post Radius",
+            "name": "rost_radius",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 30,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -188,5 +240,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660691127
+    "modified": 1670677428
 }
