@@ -68,7 +68,7 @@
 <div class="bg-<?php echo $header_background; ?> header--<?php echo $header_type ?>">
     <div class="container">
         <div class="row">
-            <div class="col header-logo header-logo--<?php echo $header_logo_size; ?>">
+            <div class="header-logo header-logo--<?php echo $header_logo_size; ?>">
                 <h1 class="header-logo__heading">
                     <a href="<?php echo home_url(); ?>" class="header-logo__link">
                         <?php if ($logo) {
