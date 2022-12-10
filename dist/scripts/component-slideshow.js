@@ -1,1 +1,1 @@
-var slider=tns({container:".slideshow__inner",items:1,nav:!1,nextButton:".slideshow__arrow--next",prevButton:".slideshow__arrow--prev"});
+var slider=tns({container:".slideshow__inner",items:1,nav:!1,nextButton:".slideshow__arrow--next",prevButton:".slideshow__arrow--prev",autoHeight:!0});

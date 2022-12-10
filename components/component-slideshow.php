@@ -17,10 +17,17 @@
     echo '<div class="slideshow slideshow--size-' . $height . '">';
         echo '<div class="slideshow__inner">';
             while ( have_rows('slides') ) : the_row();
-                $image = get_sub_field('slide_image');
+                $image = get_sub_field('image');
+                $mobile_image = get_sub_field('mobile_image');
                 if ($image) {
                     echo '<div class="slideshow__slide">';
-                        echo wp_get_attachment_image($image, 'full', "", array( "class" => "img-fluid slideshow__image" ));
+                        if ($mobile_image) {
+                            $image_class = 'img-fluid slideshow__image d-none d-md-block';
+                            echo wp_get_attachment_image($mobile_image, 'full', "", array( "class" => "img-fluid slideshow__image d-md-none" ));
+                        } else {
+                            $image_class = 'img-fluid slideshow__image';
+                        }
+                        echo wp_get_attachment_image($image, 'full', "", array( "class" => $image_class ));
                     echo '</div>';
                 }
             endwhile;
