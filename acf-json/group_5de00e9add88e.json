@@ -699,6 +699,45 @@
                                     "rows": "",
                                     "new_lines": "",
                                     "parent_repeater": "field_61c1f4c92c89f"
+                                },
+                                {
+                                    "key": "field_63947b590cfe3",
+                                    "label": "Button Text",
+                                    "name": "button_text",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_61c1f4c92c89f"
+                                },
+                                {
+                                    "key": "field_63947b670cfe4",
+                                    "label": "Button Link",
+                                    "name": "button_link",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_61c1f4c92c89f"
                                 }
                             ],
                             "rows_per_page": 20
@@ -1652,5 +1691,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670674577
+    "modified": 1670675318
 }
