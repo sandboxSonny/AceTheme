@@ -3,5 +3,6 @@ var slider = tns({
     items: 1,
     nav: false,
     nextButton: '.slideshow__arrow--next',
-    prevButton: '.slideshow__arrow--prev'
+    prevButton: '.slideshow__arrow--prev',
+    autoHeight: true
 });
