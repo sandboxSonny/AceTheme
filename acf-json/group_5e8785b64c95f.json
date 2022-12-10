@@ -183,7 +183,7 @@
             "name": "button_radius",
             "aria-label": "",
             "type": "number",
-            "instructions": "",
+            "instructions": "Border radius of the site buttons",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -205,7 +205,7 @@
             "name": "rost_radius",
             "aria-label": "",
             "type": "number",
-            "instructions": "",
+            "instructions": "Border radius of the posts",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -240,5 +240,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670677428
+    "modified": 1670677560
 }
