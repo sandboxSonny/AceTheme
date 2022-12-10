@@ -1,0 +1,1 @@
+var slider=tns({container:".slideshow__inner",items:1,nav:!1,autoHeight:!0,nextButton:".slideshow__arrow--next",prevButton:".slideshow__arrow--prev",responsive:{768:{autoHeight:!1}}});

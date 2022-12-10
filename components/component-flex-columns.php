@@ -15,6 +15,8 @@
                         $image_size = 'medium';
                         $title = get_sub_field('title');
                         $content = get_sub_field('content');
+                        $button_text = get_sub_field('button_text');
+                        $button_link = get_sub_field('button_link');
                         if ($icons) {
                             $icons_class = ' column-area--icons';
                         } else {
@@ -29,6 +31,9 @@
                             echo '<div class="text-' . $text_alignment . '">';
                                 echo '<h3>' . $title . '</h3>';
                                 echo ' <p>' . $content . '</p>';
+                                if($button_link) {
+                                    echo '<a class="btn btn-' . $background . '" href="' . $button_link . '">' . $button_text . '</a>';
+                                }
                             echo '</div>';
                         echo '</div>';
                     endwhile;
