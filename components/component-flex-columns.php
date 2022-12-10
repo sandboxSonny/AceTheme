@@ -7,7 +7,7 @@
     $columns = have_rows('columns');
 
     if ($columns) {
-        echo '<div class="page-section bg-' . $background . ' column-group">';
+        echo '<div class="page-section bg-' . $background . ' flex-group">';
             echo '<div class="container">';
                 echo '<div class="row">';
                     while ( have_rows('columns') ) : the_row();
@@ -18,23 +18,19 @@
                         $button_text = get_sub_field('button_text');
                         $button_link = get_sub_field('button_link');
                         if ($icons) {
-                            $icons_class = ' column-area--icons';
+                            $icons_class = ' flex-area--icons';
                         } else {
                             $icons_class = '';
                         }
-                        echo '<div class="col-12 col-md column-area column-area--alignment-' . $text_alignment . $icons_class . '">';
+                        echo '<div class="flex-area flex-area--alignment-' . $text_alignment . $icons_class . '">';
                             if ($image) {
-                                echo '<div>';
-                                    echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid column-area__image" ));
-                                echo '</div>';
+                                echo wp_get_attachment_image($image, $image_size, "", array( "class" => "img-fluid flex-area__image" ));
                             }
-                            echo '<div class="text-' . $text_alignment . '">';
-                                echo '<h3>' . $title . '</h3>';
-                                echo ' <p>' . $content . '</p>';
-                                if($button_link) {
-                                    echo '<a class="btn btn-' . $background . '" href="' . $button_link . '">' . $button_text . '</a>';
-                                }
-                            echo '</div>';
+                            echo '<h3 class="flex-area__title">' . $title . '</h3>';
+                            echo ' <p>' . $content . '</p>';
+                            if($button_link) {
+                                echo '<a class="btn btn-' . $background . '" href="' . $button_link . '">' . $button_text . '</a>';
+                            }
                         echo '</div>';
                     endwhile;
                 echo '</div>';
