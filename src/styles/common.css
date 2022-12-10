@@ -389,7 +389,7 @@ input[type="submit"],
     display: inline-block;
     font-weight: 400;
     padding: 10px 20px;
-    border-radius: .25rem;
+    border-radius: var(--button_radius);
     border: 0;
     text-decoration: none;
     transition: 0.2s;
