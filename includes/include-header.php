@@ -65,7 +65,7 @@
     }
 ?>
 
-<div class="bg-<?php echo $header_background; ?> header--<?php echo $header_type ?>">
+<div class="bg-<?php echo $header_background; ?> header header--<?php echo $header_type ?>">
     <div class="container">
         <div class="row">
             <div class="header-logo header-logo--<?php echo $header_logo_size; ?>">
