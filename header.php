@@ -26,6 +26,8 @@
         $font = 'Mulish';
       }
       echo '<link href="https://fonts.googleapis.com/css2?family=' . $font . ':wght@300;400;600;700&display=swap" rel="stylesheet">';
+      echo '<script>' . get_field('custom_js', 'option') . '</script>';
+      echo '<style>' . get_field('custom_css', 'option') . '</style>';
     ?>
   </head>
   <body>

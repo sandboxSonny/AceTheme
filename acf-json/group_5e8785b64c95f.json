@@ -202,7 +202,7 @@
         {
             "key": "field_6394837814dd5",
             "label": "Post Radius",
-            "name": "rost_radius",
+            "name": "post_radius",
             "aria-label": "",
             "type": "number",
             "instructions": "Border radius of the posts",

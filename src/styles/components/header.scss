@@ -2,6 +2,10 @@ header {
   border-bottom: 4px solid var(--color_primary);
 }
 
+.header {
+  padding: var(--spacing_sm) 0;
+}
+
 .menu-item:last-of-type {
   padding-right: 0;
 }
@@ -306,6 +310,10 @@ ul.dropdown-menu {
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    padding: var(--spacing_md) 0;
+  }
+
   .header--standard {
     .header-right,
     .header-logo {
