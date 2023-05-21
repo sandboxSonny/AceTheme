@@ -11,9 +11,32 @@ footer ul li {
   padding: 0 20px;
 }
 
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    padding: var(--spacing_sm);
+    margin: var(--spacing_sm);
+    background: var(--color_primary);
+    border-radius: 100%;
+  }
+
+  path {
+    fill: #fff;
+  }
+}
+
 @media screen and (max-width: 720px) {
   footer ul li {
     width: 100%;
     text-align: center;
+  }
+
+  .footer__social {
+    justify-content: center;
   }
 }
