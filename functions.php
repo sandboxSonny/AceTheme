@@ -105,19 +105,33 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'general-settings',
 		'position' 		=> 8
 	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'general-settings',
+		'position' 		=> 9
+	));
 
 	acf_add_options_page(array(
 		'page_title' 	=> 'SEO',
 		'menu_title'	=> 'SEO',
 		'parent_slug'	=> 'general-settings',
-		'position' 		=> 9
+		'position' 		=> 10
+	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Social Media',
+		'menu_title'	=> 'Social',
+		'parent_slug'	=> 'general-settings',
+		'position' 		=> 11
 	));
 
 	acf_add_options_page(array(
 		'page_title' 	=> 'Custom Code',
 		'menu_title'	=> 'Custom Code',
 		'parent_slug'	=> 'general-settings',
-		'position' 		=> 10
+		'position' 		=> 11
 	));
 }
 
