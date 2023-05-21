@@ -7,8 +7,8 @@
       $pinterest_link = get_field('pinterest_link', 'option');
       $enable_social_links = get_field('enable_social_links', 'option');
 
-      $column_size = $enable_social_links ? '' : ' col-md-6';
-      $menu_alignment = $enable_social_link ? 'menu' : 'justify-content-end menu';
+      $column_size = $enable_social_links == '1' ? ' col-md-6' : '';
+      $menu_alignment = $enable_social_link == '1' ? 'justify-content-end menu' : 'menu';
     
       echo '<footer>';
         echo '<div class="container">';
