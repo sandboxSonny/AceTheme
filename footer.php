@@ -7,7 +7,7 @@
       $pinterest_link = get_field('pinterest_link', 'option');
       $enable_social_links = get_field('enable_social_links', 'option');
 
-      $column_size = $enable_social_links ? ' col-md-6' : '';
+      $column_size = $enable_social_links ? '' : ' col-md-6';
       $menu_alignment = $enable_social_link ? 'menu' : 'justify-content-end menu';
     
       echo '<footer>';
@@ -38,7 +38,7 @@
               echo '</div>';
             }
             $menu_alignment;
-            echo '<div class="col-12 col-md-6 text-center">';
+            echo '<div class="col-12' . $column_size . ' text-center">';
               wp_nav_menu( array(
                 'theme_location' => 'footer_menu',
                 'menu_class' => $menu_alignment
