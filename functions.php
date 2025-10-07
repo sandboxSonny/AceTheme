@@ -1,7 +1,9 @@
 <?php
 
-// Add Theme Menus 
-add_action( 'wp_head', 'ag_head' );
+require_once get_template_directory() . '/includes/include-head.php';
+
+// Add Theme Menus
+add_action('wp_head', 'ag_head');
 add_action( 'after_setup_theme', 'register_custom_nav_menus' );
 function register_custom_nav_menus() {
 	register_nav_menus( array(
